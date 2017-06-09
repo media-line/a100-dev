@@ -1,0 +1,96 @@
+@import "./../../scss/_variables.scss";
+
+.social-buttons {
+    svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    &__button {
+        display: inline-block;
+
+        & + .social-buttons__button {
+            padding-left: 4px;
+        }
+    }
+
+    &__link {
+        &:hover {
+            border-bottom: 1px solid transparent;
+
+            .facebook-back {
+                fill: $facebook;
+            }
+
+            .facebook-logo {
+                fill: $white;
+            }
+
+            .vk-back {
+                fill: $vk;
+            }
+
+            .vk-logo {
+                fill: $white;
+            }
+
+            .instagram-back {
+                fill: $instagram;
+            }
+
+            .instagram-logo {
+                fill: $white;
+            }
+
+            .youtube-back {
+                fill: $youtube;
+                transition: 0.2s;
+            }
+
+            .youtube-logo {
+                fill: $white;
+                transition: 0.2s;
+            }
+        }
+    }
+
+    .facebook-back {
+        fill: $white;
+        transition: 0.2s;
+    }
+
+    .facebook-logo {
+        fill: $black;
+        transition: 0.2s;
+    }
+
+    .vk-back {
+        fill: $white;
+        transition: 0.2s;
+    }
+
+    .vk-logo {
+        fill: $black;
+        transition: 0.2s;
+    }
+
+    .instagram-back {
+        fill: $white;
+        transition: 0.2s;
+    }
+
+    .instagram-logo {
+        fill: $black;
+        transition: 0.2s;
+    }
+
+    .youtube-back {
+        fill: $white;
+        transition: 0.2s;
+    }
+
+    .youtube-logo {
+        fill: $black;
+        transition: 0.2s;
+    }
+}

@@ -1,0 +1,248 @@
+.header {
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+    line-height: 1;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50%;
+        background: linear-gradient(to bottom, rgba($black, 0.5), transparent);
+    }
+
+    &__icons {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__offer {
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 11px;
+        @include link-decoration ($white, 1px, 1px, 5px, 2px, 0.4s);
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        padding: 2px 0 0 0;
+    }
+
+    &__contacts {
+        font-weight: 700;
+        padding: 0 10px;
+        font-size: 14px;
+
+        a {
+            color: $white;
+            text-decoration: none;
+            @include link-decoration ($white, 2px, 2px, 5px, 2px, 0.4s);
+        }
+    }
+
+    &__lock {
+        margin: 0 5px;
+        cursor: pointer;
+
+        &:hover {
+            .svg-lock_open {
+                transform: rotate(55deg);
+            }
+        }
+
+        svg {
+            width: 20px;
+            max-height: 20px;
+            padding: 5px;
+        }
+
+        .svg-lock {
+            stroke: $white;
+            fill: $white;
+            transition: 0.4s;
+        }
+
+        .svg-lock_open {
+            transform-origin: bottom right;
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    &__wrap {
+        display: flex;
+        padding: 20px 0;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__logo {
+        width: 230px;
+        min-width: 230px;
+        padding-right: 25px;
+        padding-top: 15px;
+
+        a {
+            display: block;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__content {
+        width: 100%;
+    }
+
+    &_alt {
+        &:before {
+            content: none;
+        }
+
+        .top-menu__link {
+            color: $black;
+            @include link-decoration ($black, 2px, 2px, 6px, 3px, 0.4s);
+        }
+
+        .header {
+            &__wide-block {
+                background-color: $white;
+            }
+
+            &__lock {
+                .svg-lock {
+                    stroke: $black;
+                    fill: $black;
+                }
+            }
+
+            &__offer {
+                color: $black;
+                @include link-decoration ($black, 1px, 1px, 5px, 2px, 0.4s);
+            }
+
+            &__contacts {
+                a {
+                    color: $black;
+                    @include link-decoration ($black, 2px, 2px, 5px, 2px, 0.4s);
+                }
+            }
+        }
+    }
+
+    &__mouse-scroll {
+        color: $white;
+        text-transform: uppercase;
+        font-size: 13px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 50px;
+        text-align: center;
+
+        svg {
+            width: 20px;
+            max-height: 30px;
+            vertical-align: middle;
+        }
+
+        .svg-mouse {
+            stroke: $white;
+        }
+    }
+
+    &__mouse-scroll-text {
+        text-align: left;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+        line-height: 1.1;
+    }
+
+    &__menu-button {
+        width: 40%;
+        text-align: right;
+        display: none;
+    }
+}
+
+@media (max-width: $tablet-point) {
+    .header {
+        &__logo {
+            width: 190px;
+            min-width: 190px;
+        }
+
+        &__top {
+            padding-bottom: 0;
+        }
+
+        &__bottom {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+        }
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .header {
+        &__logo {
+            width: 60%;
+            min-width: 60%;
+            box-sizing: border-box;
+            padding-top: 0;
+            margin-bottom: 10px;
+        }
+
+        &__wrap {
+            flex-wrap: wrap;
+        }
+
+        &__content {
+            width: 100%;
+            min-width: 100%;
+        }
+
+        &__menu-button {
+            display: inline-block;
+        }
+
+        &__offer {
+            width: 60%;
+            min-width: 60%;
+            text-align: left;
+        }
+
+        &__contacts {
+            width: 40%;
+            min-width: 40%;
+            padding: 0;
+            text-align: right;
+        }
+
+        &__top {
+            flex-wrap: wrap;
+            padding-top: 10px;
+        }
+
+        &__icons {
+            width: 100%;
+            padding-top: 20px;
+        }
+    }
+}

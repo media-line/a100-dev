@@ -1,0 +1,8 @@
+.two-column {
+    display: flex;
+
+    &__column {
+        width: 50%;
+        max-width: 50%;
+    }
+}

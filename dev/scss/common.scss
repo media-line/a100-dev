@@ -1,0 +1,25 @@
+@import "./_reset.scss";
+@import "./_variables.scss";
+@import "./_mixins.scss";
+
+@import "./../modules/header/_header.scss";
+@import "./../modules/container/_container.scss";
+@import "./../modules/two-column/_two-column.scss";
+
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+::selection {
+    /*background-color: $blue;
+    color: $white;*/
+}
+
+b {
+    font-weight: 700;
+}
+
+p {
+    padding-bottom: 10px;
+}

@@ -1,0 +1,92 @@
+@import "./../../scss/_variables.scss";
+
+.top-menu {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    flex-wrap: wrap;
+
+    &__element {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__link {
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 14px;
+        display: inline-block;
+        position: relative;
+
+        @include link-decoration ($white, 2px, 2px, 6px, 3px, 0.4s);
+    }
+
+    &__menu-button {
+        display: none;
+        width: 40px;
+        background-color: transparent;
+        border: 1px solid $white;
+        padding: 8px;
+        box-sizing: border-box;
+        border-radius: 3px;
+        outline: none;
+        display: inline-block;
+        transition: 0.2s;
+        vertical-align: middle;
+
+        &_active {
+            .top-menu__line {
+                background-color: $white;
+            }
+
+            .top-menu__line:nth-child(1){
+            	transform: translate(0, 7px) rotate(-45deg) scalex(1.5);
+            }
+
+            .top-menu__line:nth-child(2){
+            	opacity: 0;
+            }
+
+            .top-menu__line:nth-child(3){
+                transform: translate(0, -7px) rotate(45deg) scalex(1.5);
+            }
+        }
+    }
+
+    &__line {
+        height: 2px;
+        width: 100%;
+        background-color: $white;
+        display: block;
+        transition: 0.2s;
+
+        & + .top-menu__line {
+            margin-top: 5px;
+        }
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .top-menu {
+        display: none;
+        text-align: center;
+        border-top: 1px solid $white;
+        border-bottom: 1px solid $white;
+        border-radius: 3px;
+
+        &__element {
+            display: block;
+            width: 100%;
+        }
+
+        &__link {
+            display: block;
+            padding: 10px 0;
+        }
+
+        &__menu-button {
+            display: inline-block;
+        }
+    }
+}
