@@ -1,0 +1,23 @@
+.button {
+    display: inline-block;
+    border: 2px solid $black;
+    color: $black;
+    transition: 0.4s;
+    padding: 4px 17px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: $white;
+    outline: none;
+
+    &:hover {
+        background-color: $black;
+        color: $white;
+    }
+
+    &:after, &:before {
+        content: none !important;
+    }
+}

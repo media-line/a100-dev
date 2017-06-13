@@ -21,7 +21,7 @@
         width: 47%;
         min-width: 47%;
         margin-bottom: 30px;
-        @include link-decoration ($black, 2px, 2px, 6px, 3px, 0.4s);
+        @include link-decoration-important ($black, 2px, 2px, 6px, 3px, 0.4s);
         color: $black;
         text-decoration: none;
     }

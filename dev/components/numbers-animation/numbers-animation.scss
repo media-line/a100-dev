@@ -1,0 +1,97 @@
+@import "./../../scss/_variables.scss";
+
+.numbers-animation {
+    display: flex;
+    width: 100%;
+    line-height: 1.1;
+
+    &_mainpage {
+        padding-left: 60px;
+
+        .numbers-animation__number-text {
+            max-width: 120px;
+        }
+
+        .numbers-animation__number {
+            width: 31%;
+            min-width: 31%;
+        }
+
+        .numbers-animation__number:nth-child(2) {
+            width: 38%;
+            min-width: 38%;
+            padding: 0 30px;
+        }
+
+        .numbers-animation__number:nth-child(3) {
+            padding-left: 10px;
+        }
+    }
+
+    &__number {
+        width: 33%;
+        min-width: 33%;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        margin-top: 15px;
+
+        + .numbers-animation__number  {
+            border-left: 4px solid $black;
+        }
+
+        &:nth-child(2) {
+            padding: 0 10px;
+            width: 34%;
+            min-width: 34%;
+        }
+
+        &:nth-child(3) {
+            padding-left: 10px;
+        }
+     }
+
+    &__number-value {
+        font-size: 46px;
+        font-weight: 700;
+        min-width: 55px;
+        text-align: right;
+    }
+
+    &__unit {
+        padding-right: 5px;
+        font-size: 46px;
+        font-weight: 700;
+    }
+
+    &__number-text {
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: $tablet-point) {
+    .numbers-animation {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .numbers-animation {
+        flex-wrap: wrap;
+
+        &__number {
+            width: 100%;
+            min-width: 100%;
+            border-left: 4px solid $black;
+            padding-left: 10px;
+
+            &:nth-child(2) {
+                width: 100%;
+                min-width: 100%;
+                padding-left: 10px;
+            }
+        }
+    }
+}

@@ -9,20 +9,15 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
     <script src="./lib/isMobile.min.js"></script>
-    <script src="./lib/odometer.min.js"></script>
 
     <script src="./js/common.js"></script>
     <script src="./js/top-menu.js"></script>
 
 
 
-    <link href="./lib/odometer-default.css" rel="stylesheet">
-
     <link href="./css/common.css" rel="stylesheet">
     <link href="./css/social-buttons.css" rel="stylesheet">
     <link href="./css/top-menu.css" rel="stylesheet">
-    <link href="./css/advantages-block.css" rel="stylesheet">
-    <link href="./css/news-preview.css" rel="stylesheet">
     <link href="./css/bottom-menu.css" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,7 +25,7 @@
     <!--[if lte IE 9]><script src="<a href="http://phpbbex.com/oldies/oldies.js">http://phpbbex.com/oldies/oldies.js</a>" charset="utf-8"></script><![endif]-->
 </head>
 <body>
-    <header class="header header_first-screen header_alt" style="background-image: url(./images/slide1.jpg);">
+    <header class="header header_inner header_alt">
         <div class="header__wide-block">
             <div class="container container_responsive">
                 <div class="header__wrap">
@@ -114,226 +109,29 @@
                 </div>
             </div>
         </div>
-
-        <div class="header__mouse-scroll">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.9 21.32"><defs><style>.cls-1{fill:#fff;}</style></defs><title>Ресурс 1</title><path class="cls-1 svg-mouse" d="M8.45,21.32a10.25,10.25,0,0,1-3.88-.76C1.67,19.3,0,14.74,0,12.07V5.13A5.23,5.23,0,0,1,5.1,0h6.67A5.29,5.29,0,0,1,16.9,5.13v6.93c0,2.68-1.66,7.24-4.56,8.49a10.27,10.27,0,0,1-3.89.76ZM11.75,1H5.13A4.27,4.27,0,0,0,1,5.12v6.95c0,2.11,1.36,6.45,4,7.58a9.39,9.39,0,0,0,7,0c2.58-1.12,3.92-5.46,3.94-7.58V5.13A4.27,4.27,0,0,0,11.75,1Z"/><path class="cls-1 svg-mouse" d="M8.31,6.2a.5.5,0,0,1-.5-.5V.5a.5.5,0,1,1,1,0V5.7a.5.5,0,0,1-.5.5Z"/></svg>
-            <div class="header__mouse-scroll-text">Прокрутите<br> вниз</div>
-        </div>
     </header>
 
-    <div class="container container_small">
-        <div class="two-column two-column_padding">
-            <div class="two-column__column two-column__column_main">
-                А-100 Девелопмент реализует «под ключ» проекты в сфере недвижимости.
-            </div>
-
-            <div class="two-column__column">
-                <p>Брэнд «А-100 Девелопмент» включает в себя группу хорошо известных на рынке компаний: УП «Дамаан», ОДО «Этерика, Минский район», ЧУП «Алмари», ИП «Астомакс» и другие.</p>
-
-                <p>В чем наш успех? - В нацеленности на перспективу и обеспечении высокого качества выполненных работ. Мы смогли завоевать доверие и занять достойное место на рынке недвижимости, т.к.  добросовестно относимся к делу и профессионально подходим к работе с  партнерами и клиентами.</p>
-            </div>
-
-            <div class="two-column__numbers">
-                <div class="two-column__number">
-                    <div class="two-column__number-value">
-                        47
-                    </div>
-
-                    <div class="two-column__number-text">
-                        реализованных проектов
-                    </div>
+    <div class="error-404" style="background-image: url('./images/404.jpg');">
+        <div class="error-404__hover">
+            <div class="error-404__info">
+                <div class="error-404__404">
+                    404
                 </div>
 
-                <div class="two-column__number">
-                    <div class="two-column__number-value">
-                        23
-                    </div>
-
-                    <div class="two-column__number-text">
-                        объектов в эксплуатации
-                    </div>
+                <div class="error-404__text">
+                    Такой страницы на сайте больше не существует.<br>
+                    Вернитесь на главную или воспользуйтесь картой сайта.
                 </div>
 
-                <div class="two-column__number">
-                    <div class="two-column__number-value">
-                        7
-                    </div>
-
-                    <div class="two-column__number-text">
-                        проектов в разработке
-                    </div>
+                <div class="error-404__readmore">
+                    <a href="/" class="button">
+                        Назад
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
-    <section class="advantages-block" style='background-image: url(./images/back1.jpg);'>
-        <div class="advantages-block__blackout"></div>
-
-        <div class="container container_small">
-            <div class="title-back">
-                Преимущества
-            </div>
-
-            <div class="advantages-block__wrap">
-                <div class="icon-block">
-                    <div class="icon-block__title">
-                        Проектирование и строительство
-                    </div>
-
-                    <div class="icon-block__icon">
-                        <img src="./images/house.png" alt="">
-                    </div>
-                </div>
-
-                <div class="icon-block">
-                    <div class="icon-block__title">
-                        Привлечение финансирования
-                    </div>
-
-                    <div class="icon-block__icon">
-                        <img src="./images/part.png" alt="">
-                    </div>
-                </div>
-
-                <div class="icon-block">
-                    <div class="icon-block__title">
-                        Обслуживание недвижимости
-                    </div>
-
-                    <div class="icon-block__icon">
-                        <img src="./images/money.png" alt="">
-                    </div>
-                </div>
-
-                <div class="icon-block">
-                    <div class="icon-block__title">
-                        Маркетинг и продажи
-                    </div>
-
-                    <div class="icon-block__icon">
-                        <img src="./images/marketing.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="container container_small">
-        <div class="two-column two-column_padding-small">
-            <div class="two-column__column two-column__column_main">
-                Недвижимость – один из самых надежных видов инвестиций
-            </div>
-
-            <div class="two-column__column">
-                <p>Брэнд «А-100 Девелопмент» включает в себя группу хорошо известных на рынке компаний: УП «Дамаан», ОДО «Этерика, Минский район», ЧУП «Алмари», ИП «Астомакс» и другие.</p>
-
-                <p>В чем наш успех? - В нацеленности на перспективу и обеспечении высокого качества выполненных работ. Мы смогли завоевать доверие и занять достойное место на рынке недвижимости, т.к.  добросовестно относимся к делу и профессионально подходим к работе с  партнерами и клиентами.</p>
-            </div>
-        </div>
-    </div>
-
-    <section class="advantages-block" style='background-image: url(./images/back2.jpg);'>
-        <div class="advantages-block__blackout"></div>
-
-        <div class="container  container_small">
-            <div class="title-back">
-                Управление инвестициями
-            </div>
-
-            <div class="advantages-block__wrap">
-                <div class="icon-block">
-                    <div class="icon-block__title">
-                        Привлечение финансирования
-                    </div>
-
-                    <div class="icon-block__icon">
-                        <img src="./images/part.png" alt="">
-                    </div>
-                </div>
-
-                <div class="icon-block">
-                    <div class="icon-block__title">
-                        Обслуживание недвижимости
-                    </div>
-
-                    <div class="icon-block__icon">
-                        <img src="./images/money.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="container container_small">
-        <section class="news-preview">
-            <div class="news-preview__name">
-                Новости
-            </div>
-
-            <div class="news-preview__list">
-                <a href="/" class="news-preview__single">
-                    <div class="news-preview__date">
-                        4.02.2017
-                    </div>
-
-                    <div class="news-preview__title">
-                        А-100 Девелопмент — победитель престижной премии «Брэнд года»!
-                    </div>
-                </a>
-
-                <a href="/" class="news-preview__single">
-                    <div class="news-preview__date">
-                        5.02.2017
-                    </div>
-
-                    <div class="news-preview__title">
-                        От 17,5% на 20 лет: уникальный кредит на жилье в НБ.
-                    </div>
-                </a>
-
-                <a href="/" class="news-preview__single">
-                    <div class="news-preview__date">
-                        28.03.2017
-                    </div>
-
-                    <div class="news-preview__title">
-                        Квартиры с террасами - то, о чем вы мечтали!
-                    </div>
-                </a>
-
-                <a href="/" class="news-preview__single">
-                    <div class="news-preview__date">
-                        7.03.2017
-                    </div>
-
-                    <div class="news-preview__title">
-                        Профессионалы помогают нашим покупателям с дизайном квартиры
-                    </div>
-                </a>
-
-                <a href="/" class="news-preview__single">
-                    <div class="news-preview__date">
-                        4.02.2017
-                    </div>
-
-                    <div class="news-preview__title">
-                        А-100 Девелопмент — победитель престижной премии «Брэнд года»!
-                    </div>
-                </a>
-
-                <a href="/" class="news-preview__single">
-                    <div class="news-preview__date">
-                        5.02.2017
-                    </div>
-
-                    <div class="news-preview__title">
-                        От 17,5% на 20 лет: уникальный кредит на жилье в НБ.
-                    </div>
-                </a>
-            </div>
-        </section>
-    </div>
 
     <footer class="footer">
         <div class="container container_small">

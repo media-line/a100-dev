@@ -7,6 +7,18 @@
     &_small {
         width: $container-tiny;
     }
+
+    &_responsive {
+        width: $container-responsive;
+    }
+}
+
+@media (max-width: $big-device-point) {
+    .container {
+        &_responsive {
+            width: $container;
+        }
+    }
 }
 
 @media (max-width: $small-device-point) {

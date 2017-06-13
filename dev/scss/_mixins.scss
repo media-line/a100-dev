@@ -21,6 +21,29 @@
     }
 }
 
+@mixin link-decoration-important ($color, $height1, $height2, $translate1, $translate2, $transition) {
+    position: relative;
+
+    &:after {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: $height1 !important;
+        background: $color !important;
+        content: '';
+        opacity: 0;
+        transition: $transition !important;
+        transform: translateY($translate1) !important;
+    }
+
+    &:hover:after {
+        height: $height2 !important;
+        opacity: 1;
+        transform: translateY($translate2) !important;
+    }
+}
+
 @mixin link-decoration-inverse ($color, $height1, $height2, $translate1, $translate2, $transition) {
     position: relative;
 

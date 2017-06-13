@@ -8,6 +8,10 @@
 @import "./../modules/two-column/_two-column.scss";
 @import "./../modules/title-back/_title-back.scss";
 @import "./../modules/page/_page.scss";
+@import "./../modules/button/_button.scss";
+@import "./../modules/error-404/_error-404.scss";
+@import "./../modules/modal/modal.scss";
+
 
 
 body {
@@ -25,4 +29,20 @@ b {
 
 p {
     padding-bottom: 10px;
+}
+
+img.right {
+    margin-right: 15px;
+}
+
+img.left {
+    margin-left: 15px;
+}
+
+img.top {
+    margin-top: 15px;
+}
+
+img.bottom {
+    margin-bottom: 15px;
 }

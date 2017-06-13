@@ -1,7 +1,36 @@
 @import "./../../scss/_variables.scss";
 
 .pagination {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+
+    &__element {
+        padding: 0 12px 0 12px;
+        font-weight: 700;
+
+        & + .pagination__element {
+            border-left: 1px solid $black;
+        }
+    }
+
     &__link {
         text-decoration: none;
+        font-weight: 400;
+        transition: 0.4s;
+        color: $black;
+        @include link-decoration ($black, 1px, 1px, 4px, 1px, 0.4s);
+    }
+
+    &__text {
+
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .pagination {
+        &__text {
+            display: none;
+        }
     }
 }

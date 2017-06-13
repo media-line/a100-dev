@@ -80,6 +80,15 @@
         padding-bottom: 20px;
     }
 
+    &__bottom {
+        display: flex;
+        justify-content: flex-end;
+
+        .top-menu {
+            width: 90%;
+        }
+    }
+
     &__wrap {
         display: flex;
         padding: 20px 0;
@@ -119,6 +128,18 @@
         .top-menu__link {
             color: $black;
             @include link-decoration ($black, 2px, 2px, 6px, 3px, 0.4s);
+        }
+
+        .top-menu__menu-button {
+            border: 1px solid $black;
+        }
+
+        .top-menu__line {
+            background-color: $black;
+        }
+
+        .top-menu__menu-button_active .top-menu__line {
+                background-color: $black;
         }
 
         .header {
@@ -183,6 +204,16 @@
     }
 }
 
+@media (max-width: $big-device-point) {
+    .header {
+        &__bottom {
+            .top-menu {
+                width: 100%;
+            }
+        }
+    }
+}
+
 @media (max-width: $tablet-point) {
     .header {
         &__logo {
@@ -200,11 +231,22 @@
             left: 0;
             right: 0;
         }
+
+        &_inner {
+            margin-bottom: 40px;
+        }
     }
 }
 
 @media (max-width: $mobile-point) {
     .header {
+        &_alt {
+            .top-menu {
+                border-top: 1px solid $black;
+                border-bottom: 1px solid $black;
+            }    
+        }
+
         &__logo {
             width: 60%;
             min-width: 60%;
@@ -247,6 +289,10 @@
         &__icons {
             width: 100%;
             padding-top: 20px;
+        }
+
+        &_inner {
+            margin-bottom: 0px;
         }
     }
 }

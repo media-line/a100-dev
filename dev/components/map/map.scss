@@ -1,0 +1,26 @@
+@import "./../../scss/_variables.scss";
+
+
+.map {
+    &_contacts {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .ymaps-2-1-50-ground-pane {
+        filter: grayscale(1);
+    }
+}
+
+
+@media (max-width: $mobile-point) {
+    .map {
+        &_contacts {
+            position: relative;
+            height: 400px;
+        }
+    }
+}

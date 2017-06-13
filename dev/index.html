@@ -13,6 +13,7 @@
 
     <script src="./js/common.js"></script>
     <script src="./js/top-menu.js"></script>
+    <script src="./js/numbers-animation.js"></script>
 
 
 
@@ -24,6 +25,7 @@
     <link href="./css/advantages-block.css" rel="stylesheet">
     <link href="./css/news-preview.css" rel="stylesheet">
     <link href="./css/bottom-menu.css" rel="stylesheet">
+    <link href="./css/numbers-animation.css" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -32,7 +34,7 @@
 <body>
     <header class="header header_first-screen" style="background-image: url(./images/slide1.jpg);">
         <div class="header__wide-block">
-            <div class="container">
+            <div class="container container_responsive">
                 <div class="header__wrap">
                     <div class="header__logo">
                         <a href="/"><img src="./images/logo.png" alt=""></a>
@@ -117,7 +119,7 @@
     </header>
 
     <div class="container container_small">
-        <div class="two-column two-column_padding">
+        <div class="two-column two-column_padding two-column_mainpage">
             <div class="two-column__column two-column__column_main">
                 А-100 Девелопмент реализует «под ключ» проекты в сфере недвижимости.
             </div>
@@ -128,33 +130,45 @@
                 <p>В чем наш успех? - В нацеленности на перспективу и обеспечении высокого качества выполненных работ. Мы смогли завоевать доверие и занять достойное место на рынке недвижимости, т.к.  добросовестно относимся к делу и профессионально подходим к работе с  партнерами и клиентами.</p>
             </div>
 
-            <div class="two-column__numbers">
-                <div class="two-column__number">
-                    <div class="two-column__number-value">
-                        47
+            <div class="numbers-animation  numbers-animation_mainpage">
+                <div class="numbers-animation__number">
+                    <div class="numbers-animation__number-value">
+                        <span class="numbers-animation__number-js">47</span>
                     </div>
 
-                    <div class="two-column__number-text">
+                    <div class="numbers-animation__unit">
+
+                    </div>
+
+                    <div class="numbers-animation__number-text">
                         реализованных проектов
                     </div>
                 </div>
 
-                <div class="two-column__number">
-                    <div class="two-column__number-value">
-                        23
+                <div class="numbers-animation__number">
+                    <div class="numbers-animation__number-value">
+                        <span class="numbers-animation__number-js">23</span>
                     </div>
 
-                    <div class="two-column__number-text">
+                    <div class="numbers-animation__unit">
+
+                    </div>
+
+                    <div class="numbers-animation__number-text">
                         объектов в эксплуатации
                     </div>
                 </div>
 
-                <div class="two-column__number">
-                    <div class="two-column__number-value">
-                        7
+                <div class="numbers-animation__number">
+                    <div class="numbers-animation__number-value">
+                        <span class="numbers-animation__number-js">7</span>
                     </div>
 
-                    <div class="two-column__number-text">
+                    <div class="numbers-animation__unit">
+                        
+                    </div>
+
+                    <div class="numbers-animation__number-text">
                         проектов в разработке
                     </div>
                 </div>
@@ -215,7 +229,7 @@
     </section>
 
     <div class="container container_small">
-        <div class="two-column two-column_padding-small">
+        <div class="two-column two-column_padding two-column_mainpage">
             <div class="two-column__column two-column__column_main">
                 Недвижимость – один из самых надежных видов инвестиций
             </div>
