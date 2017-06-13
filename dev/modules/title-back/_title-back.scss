@@ -1,0 +1,13 @@
+.title-back {
+    font-size: 43px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $white;
+    text-align: center;
+}
+
+@media (max-width: $mobile-point) {
+    .title-back {
+        font-size: 32px;
+    }
+}

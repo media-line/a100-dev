@@ -3,8 +3,11 @@
 @import "./_mixins.scss";
 
 @import "./../modules/header/_header.scss";
+@import "./../modules/footer/footer.scss";
 @import "./../modules/container/_container.scss";
 @import "./../modules/two-column/_two-column.scss";
+@import "./../modules/title-back/_title-back.scss";
+@import "./../modules/page/_page.scss";
 
 
 body {

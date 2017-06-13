@@ -1,0 +1,57 @@
+@import "./../../scss/_variables.scss";
+@import "./../../modules/icon-block/_icon-block.scss";
+
+.advantages-block {
+    padding: 120px 0 160px 0;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+
+    &__blackout {
+        background-color: rgba($black, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .title-back {
+        padding-bottom: 40px;
+    }
+
+    .icon-block {
+        min-width: 24%;
+        width: 24%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .advantages-block {
+        padding: 50px 0 20px 0;
+
+        &__wrap {
+            flex-wrap: wrap;
+        }
+
+        .icon-block {
+            min-width: 45%;
+            width: 45%;
+            box-sizing: border-box;
+            margin: 0 2.5%;
+            margin-bottom: 30px;
+        }
+    }
+}

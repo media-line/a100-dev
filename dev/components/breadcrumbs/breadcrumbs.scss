@@ -1,0 +1,19 @@
+@import "./../../scss/_variables.scss";
+
+
+.breadcrumbs {
+    background-color: $white-dark;
+    padding: 16px 0 19px 0;
+
+    &__link {
+        text-decoration: none;
+        color: $black;
+        margin-right: 20px;
+        @include link-decoration ($black, 1px, 1px, 6px, 1px, 0.4s);
+        display: inline-block;
+    }
+
+    &__element {
+        font-weight: 500;
+    }
+}

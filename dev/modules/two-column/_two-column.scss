@@ -1,8 +1,120 @@
 .two-column {
     display: flex;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.1;
+    flex-wrap: wrap;
 
     &__column {
         width: 50%;
         max-width: 50%;
+        box-sizing: border-box;
+
+        &_main {
+            padding: 0 10px 0 60px;
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+    }
+
+    &_padding {
+        padding: 50px 0;
+    }
+
+    &_padding-small {
+        padding: 30px 0;
+    }
+
+    &__numbers {
+        padding-left: 60px;
+        padding-bottom: 40px;
+        display: flex;
+        width: 100%;
+    }
+
+    &__number {
+        width: 30%;
+        min-width: 30%;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        margin-top: 15px;
+
+        + .two-column__number  {
+            border-left: 4px solid $black;
+        }
+
+        &:nth-child(2) {
+            width: 40%;
+            min-width: 40%;
+            padding: 0 40px;
+        }
+
+        &:nth-child(3) {
+            padding-left: 20px;
+        }
+     }
+
+    &__number-value {
+        font-size: 50px;
+        font-weight: 700;
+        padding-right: 10px;
+    }
+
+    &__number-text {
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        max-width: 120px;
+    }
+}
+
+
+@media (max-width: $tablet-point) {
+    .two-column {
+        &__column_main {
+            padding: 0;
+        }
+
+        &__numbers {
+            padding-left: 0;
+        }
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .two-column {
+        line-height: 1.3;
+
+        &__column {
+            width: 100%;
+            max-width: 100%;
+
+            & + .two-column__column {
+                margin-top: 15px;
+            }
+        }
+
+        &_padding {
+            padding: 30px 0;
+        }
+
+        &__numbers {
+            flex-wrap: wrap;
+        }
+
+        &__number {
+            width: 100%;
+            min-width: 100%;
+            border-left: 4px solid $black;
+            padding-left: 20px;
+
+            &:nth-child(2) {
+                width: 100%;
+                min-width: 100%;
+                padding-left: 20px;
+            }
+        }
     }
 }

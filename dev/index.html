@@ -4,18 +4,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8">
 
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
-    <script src="/lib/isMobile.min.js"></script>
+    <script src="./lib/isMobile.min.js"></script>
+    <script src="./lib/odometer.min.js"></script>
 
-    <script src="/js/common.js"></script>
-    <script src="/js/top-menu.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/top-menu.js"></script>
+
+
+
+    <link href="./lib/odometer-default.css" rel="stylesheet">
 
     <link href="./css/common.css" rel="stylesheet">
     <link href="./css/social-buttons.css" rel="stylesheet">
     <link href="./css/top-menu.css" rel="stylesheet">
+    <link href="./css/advantages-block.css" rel="stylesheet">
+    <link href="./css/news-preview.css" rel="stylesheet">
+    <link href="./css/bottom-menu.css" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -109,9 +117,107 @@
     </header>
 
     <div class="container container_small">
-        <div class="two-column">
-            <div class="two-column__column">
+        <div class="two-column two-column_padding">
+            <div class="two-column__column two-column__column_main">
                 А-100 Девелопмент реализует «под ключ» проекты в сфере недвижимости.
+            </div>
+
+            <div class="two-column__column">
+                <p>Брэнд «А-100 Девелопмент» включает в себя группу хорошо известных на рынке компаний: УП «Дамаан», ОДО «Этерика, Минский район», ЧУП «Алмари», ИП «Астомакс» и другие.</p>
+
+                <p>В чем наш успех? - В нацеленности на перспективу и обеспечении высокого качества выполненных работ. Мы смогли завоевать доверие и занять достойное место на рынке недвижимости, т.к.  добросовестно относимся к делу и профессионально подходим к работе с  партнерами и клиентами.</p>
+            </div>
+
+            <div class="two-column__numbers">
+                <div class="two-column__number">
+                    <div class="two-column__number-value">
+                        47
+                    </div>
+
+                    <div class="two-column__number-text">
+                        реализованных проектов
+                    </div>
+                </div>
+
+                <div class="two-column__number">
+                    <div class="two-column__number-value">
+                        23
+                    </div>
+
+                    <div class="two-column__number-text">
+                        объектов в эксплуатации
+                    </div>
+                </div>
+
+                <div class="two-column__number">
+                    <div class="two-column__number-value">
+                        7
+                    </div>
+
+                    <div class="two-column__number-text">
+                        проектов в разработке
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="advantages-block" style='background-image: url(./images/back1.jpg);'>
+        <div class="advantages-block__blackout"></div>
+
+        <div class="container container_small">
+            <div class="title-back">
+                Преимущества
+            </div>
+
+            <div class="advantages-block__wrap">
+                <div class="icon-block">
+                    <div class="icon-block__title">
+                        Проектирование и строительство
+                    </div>
+
+                    <div class="icon-block__icon">
+                        <img src="./images/house.png" alt="">
+                    </div>
+                </div>
+
+                <div class="icon-block">
+                    <div class="icon-block__title">
+                        Привлечение финансирования
+                    </div>
+
+                    <div class="icon-block__icon">
+                        <img src="./images/part.png" alt="">
+                    </div>
+                </div>
+
+                <div class="icon-block">
+                    <div class="icon-block__title">
+                        Обслуживание недвижимости
+                    </div>
+
+                    <div class="icon-block__icon">
+                        <img src="./images/money.png" alt="">
+                    </div>
+                </div>
+
+                <div class="icon-block">
+                    <div class="icon-block__title">
+                        Маркетинг и продажи
+                    </div>
+
+                    <div class="icon-block__icon">
+                        <img src="./images/marketing.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container container_small">
+        <div class="two-column two-column_padding-small">
+            <div class="two-column__column two-column__column_main">
+                Недвижимость – один из самых надежных видов инвестиций
             </div>
 
             <div class="two-column__column">
@@ -122,8 +228,164 @@
         </div>
     </div>
 
-    <footer class="footer">
+    <section class="advantages-block" style='background-image: url(./images/back2.jpg);'>
+        <div class="advantages-block__blackout"></div>
 
+        <div class="container  container_small">
+            <div class="title-back">
+                Управление инвестициями
+            </div>
+
+            <div class="advantages-block__wrap">
+                <div class="icon-block">
+                    <div class="icon-block__title">
+                        Привлечение финансирования
+                    </div>
+
+                    <div class="icon-block__icon">
+                        <img src="./images/part.png" alt="">
+                    </div>
+                </div>
+
+                <div class="icon-block">
+                    <div class="icon-block__title">
+                        Обслуживание недвижимости
+                    </div>
+
+                    <div class="icon-block__icon">
+                        <img src="./images/money.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container container_small">
+        <section class="news-preview">
+            <div class="news-preview__name">
+                Новости
+            </div>
+
+            <div class="news-preview__list">
+                <a href="/" class="news-preview__single">
+                    <div class="news-preview__date">
+                        4.02.2017
+                    </div>
+
+                    <div class="news-preview__title">
+                        А-100 Девелопмент — победитель престижной премии «Брэнд года»!
+                    </div>
+                </a>
+
+                <a href="/" class="news-preview__single">
+                    <div class="news-preview__date">
+                        5.02.2017
+                    </div>
+
+                    <div class="news-preview__title">
+                        От 17,5% на 20 лет: уникальный кредит на жилье в НБ.
+                    </div>
+                </a>
+
+                <a href="/" class="news-preview__single">
+                    <div class="news-preview__date">
+                        28.03.2017
+                    </div>
+
+                    <div class="news-preview__title">
+                        Квартиры с террасами - то, о чем вы мечтали!
+                    </div>
+                </a>
+
+                <a href="/" class="news-preview__single">
+                    <div class="news-preview__date">
+                        7.03.2017
+                    </div>
+
+                    <div class="news-preview__title">
+                        Профессионалы помогают нашим покупателям с дизайном квартиры
+                    </div>
+                </a>
+
+                <a href="/" class="news-preview__single">
+                    <div class="news-preview__date">
+                        4.02.2017
+                    </div>
+
+                    <div class="news-preview__title">
+                        А-100 Девелопмент — победитель престижной премии «Брэнд года»!
+                    </div>
+                </a>
+
+                <a href="/" class="news-preview__single">
+                    <div class="news-preview__date">
+                        5.02.2017
+                    </div>
+
+                    <div class="news-preview__title">
+                        От 17,5% на 20 лет: уникальный кредит на жилье в НБ.
+                    </div>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container container_small">
+            <div class="footer__wrap">
+                <div class="footer__info">
+                    КОМПАНИЯ<br>
+                    «А-100 Девелопмент»
+                </div>
+
+                <div class="footer__info">
+                    АДРЕС:<br>
+                    223053, Минский р-н, д. Боровая, 7
+                </div>
+
+                <div class="footer__info">
+                    ТЕЛ./ФАКС:<br>
+                    <a href="tel:+375172333333">+375-17-233-33-33</a>
+                </div>
+
+                <div class="footer__info">
+                    E-MAIL:<br>
+                    <a href="mailto:a-100@a-100.by">a-100@a-100.by</a>
+                </div>
+
+                <div class="footer__info">
+                    <div class="social-buttons">
+                        <div class="social-buttons">
+                            <div class="social-buttons__button">
+                                <a href="/" class="social-buttons__link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.44 12.44"><g id="Layer_1" data-name="Layer 1"><path class="facebook-back" d="M10.07,12.42l-7.65,0A2.39,2.39,0,0,1,0,10.07L0,2.42A2.39,2.39,0,0,1,2.38,0L10,0a2.39,2.39,0,0,1,2.39,2.38l0,7.65A2.39,2.39,0,0,1,10.07,12.42Z"/><path class="facebook-logo" d="M9.13,12.42H7l0-5.25H5.86V5.38H6.94V4.29A2,2,0,0,1,9.28,1.93h1.45V3.73H9.83c-.68,0-.72.25-.72.72v.91h1.64l-.19,1.81H9.12l0,5.25Z"/></g></svg>
+                                </a>
+                            </div>
+
+                            <div class="social-buttons__button">
+                                <a href="/" class="social-buttons__link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.44 12.45"><g id="Layer_1" data-name="Layer 1"><path class="vk-back" d="M10.07,12.42l-7.65,0A2.39,2.39,0,0,1,0,10.07L0,2.42A2.38,2.38,0,0,1,2.38,0L10,0a2.38,2.38,0,0,1,2.39,2.38l0,7.65A2.38,2.38,0,0,1,10.07,12.42Z"/><path class="vk-logo" d="M11.15,8.65l0-.06a5.13,5.13,0,0,0-1-1.15h0c-.22-.21-.37-.35-.42-.43a.41.41,0,0,1-.08-.42,3.94,3.94,0,0,1,.47-.68l.34-.44q.9-1.2.78-1.54l0-.05A.3.3,0,0,0,11,3.77a.82.82,0,0,0-.33,0l-1.5,0a.17.17,0,0,0-.1,0H9l0,0-.06.05A.38.38,0,0,0,8.82,4a8.64,8.64,0,0,1-.55,1.17c-.13.22-.25.4-.35.56a2.47,2.47,0,0,1-.27.35l-.2.18c-.06,0-.1.06-.13.06l-.09,0a.32.32,0,0,1-.12-.13A.53.53,0,0,1,7,5.94c0-.08,0-.15,0-.21s0-.14,0-.25,0-.18,0-.22S7,5,7,4.83s0-.28,0-.37,0-.18,0-.29a1.14,1.14,0,0,0,0-.24A.74.74,0,0,0,7,3.77a.28.28,0,0,0-.11-.12L6.7,3.58A3.64,3.64,0,0,0,6,3.51a3.47,3.47,0,0,0-1.25.13.69.69,0,0,0-.2.16c-.06.08-.07.12,0,.13A.64.64,0,0,1,5,4.15l0,.06a1,1,0,0,1,.07.24,2.5,2.5,0,0,1,0,.38,4.14,4.14,0,0,1,0,.65c0,.18,0,.32,0,.42A.92.92,0,0,1,5,6.15l-.06.12,0,0-.14,0a.34.34,0,0,1-.18-.07A1.18,1.18,0,0,1,4.38,6a2.87,2.87,0,0,1-.25-.36,6.14,6.14,0,0,1-.29-.54L3.75,5l-.22-.43c-.09-.19-.17-.37-.24-.54a.36.36,0,0,0-.13-.17h0l-.08,0-.12,0H1.51a.36.36,0,0,0-.3.1l0,0a.19.19,0,0,0,0,.08.43.43,0,0,0,0,.14c.21.49.44,1,.68,1.41s.46.82.64,1.1.37.54.55.79l.37.47.14.16.13.12a3.27,3.27,0,0,0,.37.3,6.35,6.35,0,0,0,.54.34,2.82,2.82,0,0,0,.69.27,2.35,2.35,0,0,0,.76.08h.6A.4.4,0,0,0,7,9.08L7,9A.34.34,0,0,0,7,9a.48.48,0,0,0,0-.14,1.68,1.68,0,0,1,0-.41,1,1,0,0,1,.09-.27A.61.61,0,0,1,7.28,8l.09-.07,0,0A.33.33,0,0,1,7.71,8a1.77,1.77,0,0,1,.32.3l.36.4A2.48,2.48,0,0,0,8.75,9l.11.06a1.42,1.42,0,0,0,.27.11.63.63,0,0,0,.29,0l1.33,0a.6.6,0,0,0,.31-.07A.25.25,0,0,0,11.19,9a.37.37,0,0,0,0-.18A.61.61,0,0,0,11.15,8.65Z"/></g></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bottom-menu">
+                        <div class="bottom-menu__element">
+                            <a href="/" class="bottom-menu__link">Карта сайта</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__copy">
+                Любая информация, представленная на данном сайте, носит исключительно информационный характер и ни при каких условиях не является публичной офертой.
+            </div>
+
+            <div class="footer__medialine">
+                Разработано в <a href="/">Медиа Лайн</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

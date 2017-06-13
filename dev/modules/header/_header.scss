@@ -107,6 +107,10 @@
         width: 100%;
     }
 
+    &_inner {
+        height: auto;
+    }
+
     &_alt {
         &:before {
             content: none;

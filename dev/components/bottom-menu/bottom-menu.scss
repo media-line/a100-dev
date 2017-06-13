@@ -1,0 +1,10 @@
+@import "./../../scss/_variables.scss";
+
+.bottom-menu {
+    &__link {
+        color: $white;
+        font-size: 10px;
+        text-decoration: none;
+        @include link-decoration-inverse ($white, 1px, 1px, 0, 5px, 0.4s);
+    }
+}
