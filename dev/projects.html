@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8">
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+
+    <script src="./lib/isMobile.min.js"></script>
+
+    <script src="./js/common.js"></script>
+    <script src="./js/top-menu.js"></script>
+
+
+
+    <link href="./css/common.css" rel="stylesheet">
+    <link href="./css/social-buttons.css" rel="stylesheet">
+    <link href="./css/top-menu.css" rel="stylesheet">
+    <link href="./css/bottom-menu.css" rel="stylesheet">
+    <link href="./css/breadcrumbs.css" rel="stylesheet">
+    <link href="./css/projects.css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--[if lte IE 9]><script src="<a href="http://phpbbex.com/oldies/oldies.js">http://phpbbex.com/oldies/oldies.js</a>" charset="utf-8"></script><![endif]-->
+</head>
+<body>
+    <header class="header header_inner header_alt">
+        <div class="header__wide-block">
+            <div class="container container_responsive">
+                <div class="header__wrap">
+                    <div class="header__logo">
+                        <a href="/"><img src="./images/logo-color.png" alt=""></a>
+                    </div>
+
+                    <div class="header__menu-button">
+                        <button class="top-menu__menu-button">
+                            <span class="top-menu__line"></span>
+                            <span class="top-menu__line"></span>
+                            <span class="top-menu__line"></span>
+                        </button>
+                    </div>
+
+                    <div class="header__content">
+                        <div class="header__top">
+                            <button class="header__offer">
+                                Предложить земельный участок
+                            </button>
+
+                            <div class="header__contacts">
+                                <a href="tel:+375172333333">+375-17-233-33-33</a>
+                            </div>
+
+                            <div class="header__icons">
+                                <div class="header__lock">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 24.08"><defs><style>.cls-1{fill:#6a6f72;stroke:#6a6f72;}</style></defs><title>Ресурс 1</title><path class="cls-1 svg-lock" d="M20,23.58H2a1.5,1.5,0,0,1-1.5-1.5V11.42A1.5,1.5,0,0,1,2,9.92H20a1.5,1.5,0,0,1,1.5,1.5V22.08a1.5,1.5,0,0,1-1.5,1.5ZM2,10.92a.5.5,0,0,0-.5.5V22.08a.5.5,0,0,0,.5.5H20a.5.5,0,0,0,.5-.5V11.42a.5.5,0,0,0-.5-.5Z"/><path class="cls-1 svg-lock svg-lock_open" d="M17.42,10.67a.5.5,0,0,1-.5-.5V7.42a5.92,5.92,0,1,0-11.83,0v2.75a.5.5,0,0,1-1,0V7.42a6.92,6.92,0,1,1,13.83,0v2.75a.5.5,0,0,1-.5.5Z"/><path class="cls-1 svg-lock" d="M12.5,20.08h-3V17.51a2.58,2.58,0,1,1,3,0v2.57Zm-2-1h1V16.95l.26-.14a1.58,1.58,0,1,0-1.52,0l.26.14v2.14Z"/></svg>
+                                </div>
+
+                                <div class="social-buttons">
+                                    <div class="social-buttons">
+                                        <div class="social-buttons__button">
+                                            <a href="/" class="social-buttons__link">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.44 12.44"><g id="Layer_1" data-name="Layer 1"><path class="facebook-back" d="M10.07,12.42l-7.65,0A2.39,2.39,0,0,1,0,10.07L0,2.42A2.39,2.39,0,0,1,2.38,0L10,0a2.39,2.39,0,0,1,2.39,2.38l0,7.65A2.39,2.39,0,0,1,10.07,12.42Z"/><path class="facebook-logo" d="M9.13,12.42H7l0-5.25H5.86V5.38H6.94V4.29A2,2,0,0,1,9.28,1.93h1.45V3.73H9.83c-.68,0-.72.25-.72.72v.91h1.64l-.19,1.81H9.12l0,5.25Z"/></g></svg>
+                                            </a>
+                                        </div>
+
+                                        <div class="social-buttons__button">
+                                            <a href="/" class="social-buttons__link">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.44 12.45"><g id="Layer_1" data-name="Layer 1"><path class="vk-back" d="M10.07,12.42l-7.65,0A2.39,2.39,0,0,1,0,10.07L0,2.42A2.38,2.38,0,0,1,2.38,0L10,0a2.38,2.38,0,0,1,2.39,2.38l0,7.65A2.38,2.38,0,0,1,10.07,12.42Z"/><path class="vk-logo" d="M11.15,8.65l0-.06a5.13,5.13,0,0,0-1-1.15h0c-.22-.21-.37-.35-.42-.43a.41.41,0,0,1-.08-.42,3.94,3.94,0,0,1,.47-.68l.34-.44q.9-1.2.78-1.54l0-.05A.3.3,0,0,0,11,3.77a.82.82,0,0,0-.33,0l-1.5,0a.17.17,0,0,0-.1,0H9l0,0-.06.05A.38.38,0,0,0,8.82,4a8.64,8.64,0,0,1-.55,1.17c-.13.22-.25.4-.35.56a2.47,2.47,0,0,1-.27.35l-.2.18c-.06,0-.1.06-.13.06l-.09,0a.32.32,0,0,1-.12-.13A.53.53,0,0,1,7,5.94c0-.08,0-.15,0-.21s0-.14,0-.25,0-.18,0-.22S7,5,7,4.83s0-.28,0-.37,0-.18,0-.29a1.14,1.14,0,0,0,0-.24A.74.74,0,0,0,7,3.77a.28.28,0,0,0-.11-.12L6.7,3.58A3.64,3.64,0,0,0,6,3.51a3.47,3.47,0,0,0-1.25.13.69.69,0,0,0-.2.16c-.06.08-.07.12,0,.13A.64.64,0,0,1,5,4.15l0,.06a1,1,0,0,1,.07.24,2.5,2.5,0,0,1,0,.38,4.14,4.14,0,0,1,0,.65c0,.18,0,.32,0,.42A.92.92,0,0,1,5,6.15l-.06.12,0,0-.14,0a.34.34,0,0,1-.18-.07A1.18,1.18,0,0,1,4.38,6a2.87,2.87,0,0,1-.25-.36,6.14,6.14,0,0,1-.29-.54L3.75,5l-.22-.43c-.09-.19-.17-.37-.24-.54a.36.36,0,0,0-.13-.17h0l-.08,0-.12,0H1.51a.36.36,0,0,0-.3.1l0,0a.19.19,0,0,0,0,.08.43.43,0,0,0,0,.14c.21.49.44,1,.68,1.41s.46.82.64,1.1.37.54.55.79l.37.47.14.16.13.12a3.27,3.27,0,0,0,.37.3,6.35,6.35,0,0,0,.54.34,2.82,2.82,0,0,0,.69.27,2.35,2.35,0,0,0,.76.08h.6A.4.4,0,0,0,7,9.08L7,9A.34.34,0,0,0,7,9a.48.48,0,0,0,0-.14,1.68,1.68,0,0,1,0-.41,1,1,0,0,1,.09-.27A.61.61,0,0,1,7.28,8l.09-.07,0,0A.33.33,0,0,1,7.71,8a1.77,1.77,0,0,1,.32.3l.36.4A2.48,2.48,0,0,0,8.75,9l.11.06a1.42,1.42,0,0,0,.27.11.63.63,0,0,0,.29,0l1.33,0a.6.6,0,0,0,.31-.07A.25.25,0,0,0,11.19,9a.37.37,0,0,0,0-.18A.61.61,0,0,0,11.15,8.65Z"/></g></svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="header__bottom">
+                            <div class="top-menu">
+                                <div class="top-menu__element">
+                                    <a href="/" class="top-menu__link">О компании</a>
+                                </div>
+
+                                <div class="top-menu__element">
+                                    <a href="/" class="top-menu__link">Проекты</a>
+                                </div>
+
+                                <div class="top-menu__element">
+                                    <a href="/" class="top-menu__link">Арендаторам</a>
+                                </div>
+
+                                <div class="top-menu__element">
+                                    <a href="/" class="top-menu__link">Пресс-центр</a>
+                                </div>
+
+                                <div class="top-menu__element">
+                                    <a href="/" class="top-menu__link">Партнеры</a>
+                                </div>
+
+                                <div class="top-menu__element">
+                                    <a href="/" class="top-menu__link">Тендеры</a>
+                                </div>
+
+                                <div class="top-menu__element">
+                                    <a href="/" class="top-menu__link">Контакты</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="container container_responsive">
+            <a href="/" class="breadcrumbs__link">
+                Главная
+            </a>
+
+            <span class="breadcrumbs__element">
+                Проекты
+            </span>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="container">
+            <div class="page__title">
+                Проекты
+
+                <div class="page__title-description">
+                    Инвестиционный портфель включает проекты разных сегментов.
+                </div>
+            </div>
+
+            <div class="projects">
+                <div class="projects__filter">
+                    <a href="/" class="button">Все объекты</a>
+                    <a href="/" class="button">Жилая недвижимость</a>
+                    <a href="/" class="button">Коммерческая недвижимость</a>
+                    <a href="/" class="button">Объекты на карте</a>
+                </div>
+
+                <div class="projects__name">
+                    Жилая недвижимость
+                </div>
+
+                <div class="projects__wrap">
+                    <a href="/" class="project">
+                        <div class="project__img-block">
+                            <div class="project__img" style="background-image: url(./images/project1.jpg);"></div>
+                            <div class="project__blackout"></div>
+                            <div class="project__state">В стадии строительства</div>
+                        </div>
+
+                        <div class="project__name">
+                            Жилой квартал “Зеленые горки”
+                        </div>
+
+                        <div class="project__address">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 325.469 325.469" style="enable-background:new 0 0 325.469 325.469;" xml:space="preserve">
+			                    <path style="fill:#030303;" d="M162.749,325.469l-13.297-14.123c-18.747-19.933-112.25-122.571-112.25-185.815
+				                C37.201,56.308,93.518,0,162.737,0c69.208,0,125.525,56.316,125.53,125.53c0,64.605-100.769,173.597-112.256,185.815
+				                L162.749,325.469z M162.743,11.705c-62.767,0-113.826,51.062-113.826,113.819c0,60.082,97.907,165.923,109.065,177.788
+				                l4.754,5.055l4.755-5.05c40.512-43.067,109.077-128.986,109.077-177.793C276.563,62.767,225.501,11.705,162.743,11.705z"/>
+
+		                	    <path style="fill:#030303;" d="M162.743,180.906c-30.534,0-55.379-24.842-55.379-55.376c0-30.537,24.845-55.379,55.379-55.379
+				                c30.525,0,55.365,24.842,55.376,55.379C218.119,156.064,193.28,180.906,162.743,180.906z M162.743,81.862
+				                c-24.081,0-43.668,19.593-43.668,43.668c0,24.076,19.593,43.666,43.668,43.666c24.076,0,43.666-19.59,43.666-43.666
+				                C206.397,101.449,186.819,81.862,162.743,81.862z"/></svg> Минский район, аг. Сеница
+                        </div>
+                    </a>
+
+                    <a href="/" class="project">
+                        <div class="project__img-block">
+                            <div class="project__img" style="background-image: url(./images/project2.jpg);"></div>
+                            <div class="project__blackout"></div>
+                            <div class="project__state">В стадии строительства</div>
+                        </div>
+
+                        <div class="project__name">
+                            Жилой квартал “Зеленые горки”
+                        </div>
+
+                        <div class="project__address">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 325.469 325.469" style="enable-background:new 0 0 325.469 325.469;" xml:space="preserve">
+			                    <path style="fill:#030303;" d="M162.749,325.469l-13.297-14.123c-18.747-19.933-112.25-122.571-112.25-185.815
+				                C37.201,56.308,93.518,0,162.737,0c69.208,0,125.525,56.316,125.53,125.53c0,64.605-100.769,173.597-112.256,185.815
+				                L162.749,325.469z M162.743,11.705c-62.767,0-113.826,51.062-113.826,113.819c0,60.082,97.907,165.923,109.065,177.788
+				                l4.754,5.055l4.755-5.05c40.512-43.067,109.077-128.986,109.077-177.793C276.563,62.767,225.501,11.705,162.743,11.705z"/>
+
+		                	    <path style="fill:#030303;" d="M162.743,180.906c-30.534,0-55.379-24.842-55.379-55.376c0-30.537,24.845-55.379,55.379-55.379
+				                c30.525,0,55.365,24.842,55.376,55.379C218.119,156.064,193.28,180.906,162.743,180.906z M162.743,81.862
+				                c-24.081,0-43.668,19.593-43.668,43.668c0,24.076,19.593,43.666,43.668,43.666c24.076,0,43.666-19.59,43.666-43.666
+				                C206.397,101.449,186.819,81.862,162.743,81.862z"/></svg> Минский район, аг. Сеница
+                        </div>
+                    </a>
+
+                    <a href="/" class="project">
+                        <div class="project__img-block">
+                            <div class="project__img" style="background-image: url(./images/project3.jpg);"></div>
+                            <div class="project__blackout"></div>
+                            <div class="project__state">В стадии строительства</div>
+                        </div>
+
+                        <div class="project__name">
+                            Жилой квартал “Зеленые горки”
+                        </div>
+
+                        <div class="project__address">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 325.469 325.469" style="enable-background:new 0 0 325.469 325.469;" xml:space="preserve">
+			                    <path style="fill:#030303;" d="M162.749,325.469l-13.297-14.123c-18.747-19.933-112.25-122.571-112.25-185.815
+				                C37.201,56.308,93.518,0,162.737,0c69.208,0,125.525,56.316,125.53,125.53c0,64.605-100.769,173.597-112.256,185.815
+				                L162.749,325.469z M162.743,11.705c-62.767,0-113.826,51.062-113.826,113.819c0,60.082,97.907,165.923,109.065,177.788
+				                l4.754,5.055l4.755-5.05c40.512-43.067,109.077-128.986,109.077-177.793C276.563,62.767,225.501,11.705,162.743,11.705z"/>
+
+		                	    <path style="fill:#030303;" d="M162.743,180.906c-30.534,0-55.379-24.842-55.379-55.376c0-30.537,24.845-55.379,55.379-55.379
+				                c30.525,0,55.365,24.842,55.376,55.379C218.119,156.064,193.28,180.906,162.743,180.906z M162.743,81.862
+				                c-24.081,0-43.668,19.593-43.668,43.668c0,24.076,19.593,43.666,43.668,43.666c24.076,0,43.666-19.59,43.666-43.666
+				                C206.397,101.449,186.819,81.862,162.743,81.862z"/></svg> Минский район, аг. Сеница
+                        </div>
+                    </a>
+
+                    <a href="/" class="project">
+                        <div class="project__img-block">
+                            <div class="project__img" style="background-image: url(./images/project4.jpg);"></div>
+                            <div class="project__blackout"></div>
+                            <div class="project__state">В стадии строительства</div>
+                        </div>
+
+                        <div class="project__name">
+                            Жилой квартал “Зеленые горки”
+                        </div>
+
+                        <div class="project__address">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 325.469 325.469" style="enable-background:new 0 0 325.469 325.469;" xml:space="preserve">
+			                    <path style="fill:#030303;" d="M162.749,325.469l-13.297-14.123c-18.747-19.933-112.25-122.571-112.25-185.815
+				                C37.201,56.308,93.518,0,162.737,0c69.208,0,125.525,56.316,125.53,125.53c0,64.605-100.769,173.597-112.256,185.815
+				                L162.749,325.469z M162.743,11.705c-62.767,0-113.826,51.062-113.826,113.819c0,60.082,97.907,165.923,109.065,177.788
+				                l4.754,5.055l4.755-5.05c40.512-43.067,109.077-128.986,109.077-177.793C276.563,62.767,225.501,11.705,162.743,11.705z"/>
+
+		                	    <path style="fill:#030303;" d="M162.743,180.906c-30.534,0-55.379-24.842-55.379-55.376c0-30.537,24.845-55.379,55.379-55.379
+				                c30.525,0,55.365,24.842,55.376,55.379C218.119,156.064,193.28,180.906,162.743,180.906z M162.743,81.862
+				                c-24.081,0-43.668,19.593-43.668,43.668c0,24.076,19.593,43.666,43.668,43.666c24.076,0,43.666-19.59,43.666-43.666
+				                C206.397,101.449,186.819,81.862,162.743,81.862z"/></svg> Минский район, аг. Сеница
+                        </div>
+                    </a>
+                </div>
+
+                <div class="projects__name">
+                    Коммерческая недвижимость
+                </div>
+
+                <div class="projects__wrap">
+                    <a href="/" class="project">
+                        <div class="project__img-block">
+                            <div class="project__img" style="background-image: url(./images/project1.jpg);"></div>
+                            <div class="project__blackout"></div>
+                            <div class="project__state">В стадии строительства</div>
+                        </div>
+
+                        <div class="project__name">
+                            Жилой квартал “Зеленые горки”
+                        </div>
+
+                        <div class="project__address">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 325.469 325.469" style="enable-background:new 0 0 325.469 325.469;" xml:space="preserve">
+			                    <path style="fill:#030303;" d="M162.749,325.469l-13.297-14.123c-18.747-19.933-112.25-122.571-112.25-185.815
+				                C37.201,56.308,93.518,0,162.737,0c69.208,0,125.525,56.316,125.53,125.53c0,64.605-100.769,173.597-112.256,185.815
+				                L162.749,325.469z M162.743,11.705c-62.767,0-113.826,51.062-113.826,113.819c0,60.082,97.907,165.923,109.065,177.788
+				                l4.754,5.055l4.755-5.05c40.512-43.067,109.077-128.986,109.077-177.793C276.563,62.767,225.501,11.705,162.743,11.705z"/>
+
+		                	    <path style="fill:#030303;" d="M162.743,180.906c-30.534,0-55.379-24.842-55.379-55.376c0-30.537,24.845-55.379,55.379-55.379
+				                c30.525,0,55.365,24.842,55.376,55.379C218.119,156.064,193.28,180.906,162.743,180.906z M162.743,81.862
+				                c-24.081,0-43.668,19.593-43.668,43.668c0,24.076,19.593,43.666,43.668,43.666c24.076,0,43.666-19.59,43.666-43.666
+				                C206.397,101.449,186.819,81.862,162.743,81.862z"/></svg> Минский район, аг. Сеница
+                        </div>
+                    </a>
+
+                    <a href="/" class="project">
+                        <div class="project__img-block">
+                            <div class="project__img" style="background-image: url(./images/project2.jpg);"></div>
+                            <div class="project__blackout"></div>
+                            <div class="project__state">В стадии строительства</div>
+                        </div>
+
+                        <div class="project__name">
+                            Жилой квартал “Зеленые горки”
+                        </div>
+
+                        <div class="project__address">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 325.469 325.469" style="enable-background:new 0 0 325.469 325.469;" xml:space="preserve">
+			                    <path style="fill:#030303;" d="M162.749,325.469l-13.297-14.123c-18.747-19.933-112.25-122.571-112.25-185.815
+				                C37.201,56.308,93.518,0,162.737,0c69.208,0,125.525,56.316,125.53,125.53c0,64.605-100.769,173.597-112.256,185.815
+				                L162.749,325.469z M162.743,11.705c-62.767,0-113.826,51.062-113.826,113.819c0,60.082,97.907,165.923,109.065,177.788
+				                l4.754,5.055l4.755-5.05c40.512-43.067,109.077-128.986,109.077-177.793C276.563,62.767,225.501,11.705,162.743,11.705z"/>
+
+		                	    <path style="fill:#030303;" d="M162.743,180.906c-30.534,0-55.379-24.842-55.379-55.376c0-30.537,24.845-55.379,55.379-55.379
+				                c30.525,0,55.365,24.842,55.376,55.379C218.119,156.064,193.28,180.906,162.743,180.906z M162.743,81.862
+				                c-24.081,0-43.668,19.593-43.668,43.668c0,24.076,19.593,43.666,43.668,43.666c24.076,0,43.666-19.59,43.666-43.666
+				                C206.397,101.449,186.819,81.862,162.743,81.862z"/></svg> Минский район, аг. Сеница
+                        </div>
+                    </a>
+
+                    <a href="/" class="project">
+                        <div class="project__img-block">
+                            <div class="project__img" style="background-image: url(./images/project3.jpg);"></div>
+                            <div class="project__blackout"></div>
+                            <div class="project__state">В стадии строительства</div>
+                        </div>
+
+                        <div class="project__name">
+                            Жилой квартал “Зеленые горки”
+                        </div>
+
+                        <div class="project__address">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 325.469 325.469" style="enable-background:new 0 0 325.469 325.469;" xml:space="preserve">
+			                    <path style="fill:#030303;" d="M162.749,325.469l-13.297-14.123c-18.747-19.933-112.25-122.571-112.25-185.815
+				                C37.201,56.308,93.518,0,162.737,0c69.208,0,125.525,56.316,125.53,125.53c0,64.605-100.769,173.597-112.256,185.815
+				                L162.749,325.469z M162.743,11.705c-62.767,0-113.826,51.062-113.826,113.819c0,60.082,97.907,165.923,109.065,177.788
+				                l4.754,5.055l4.755-5.05c40.512-43.067,109.077-128.986,109.077-177.793C276.563,62.767,225.501,11.705,162.743,11.705z"/>
+
+		                	    <path style="fill:#030303;" d="M162.743,180.906c-30.534,0-55.379-24.842-55.379-55.376c0-30.537,24.845-55.379,55.379-55.379
+				                c30.525,0,55.365,24.842,55.376,55.379C218.119,156.064,193.28,180.906,162.743,180.906z M162.743,81.862
+				                c-24.081,0-43.668,19.593-43.668,43.668c0,24.076,19.593,43.666,43.668,43.666c24.076,0,43.666-19.59,43.666-43.666
+				                C206.397,101.449,186.819,81.862,162.743,81.862z"/></svg> Минский район, аг. Сеница
+                        </div>
+                    </a>
+
+                    <a href="/" class="project">
+                        <div class="project__img-block">
+                            <div class="project__img" style="background-image: url(./images/project4.jpg);"></div>
+                            <div class="project__blackout"></div>
+                            <div class="project__state">В стадии строительства</div>
+                        </div>
+
+                        <div class="project__name">
+                            Жилой квартал “Зеленые горки”
+                        </div>
+
+                        <div class="project__address">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 325.469 325.469" style="enable-background:new 0 0 325.469 325.469;" xml:space="preserve">
+			                    <path style="fill:#030303;" d="M162.749,325.469l-13.297-14.123c-18.747-19.933-112.25-122.571-112.25-185.815
+				                C37.201,56.308,93.518,0,162.737,0c69.208,0,125.525,56.316,125.53,125.53c0,64.605-100.769,173.597-112.256,185.815
+				                L162.749,325.469z M162.743,11.705c-62.767,0-113.826,51.062-113.826,113.819c0,60.082,97.907,165.923,109.065,177.788
+				                l4.754,5.055l4.755-5.05c40.512-43.067,109.077-128.986,109.077-177.793C276.563,62.767,225.501,11.705,162.743,11.705z"/>
+
+		                	    <path style="fill:#030303;" d="M162.743,180.906c-30.534,0-55.379-24.842-55.379-55.376c0-30.537,24.845-55.379,55.379-55.379
+				                c30.525,0,55.365,24.842,55.376,55.379C218.119,156.064,193.28,180.906,162.743,180.906z M162.743,81.862
+				                c-24.081,0-43.668,19.593-43.668,43.668c0,24.076,19.593,43.666,43.668,43.666c24.076,0,43.666-19.59,43.666-43.666
+				                C206.397,101.449,186.819,81.862,162.743,81.862z"/></svg> Минский район, аг. Сеница
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container container_small">
+            <div class="footer__wrap">
+                <div class="footer__info">
+                    КОМПАНИЯ<br>
+                    «А-100 Девелопмент»
+                </div>
+
+                <div class="footer__info">
+                    АДРЕС:<br>
+                    223053, Минский р-н, д. Боровая, 7
+                </div>
+
+                <div class="footer__info">
+                    ТЕЛ./ФАКС:<br>
+                    <a href="tel:+375172333333">+375-17-233-33-33</a>
+                </div>
+
+                <div class="footer__info">
+                    E-MAIL:<br>
+                    <a href="mailto:a-100@a-100.by">a-100@a-100.by</a>
+                </div>
+
+                <div class="footer__info">
+                    <div class="social-buttons">
+                        <div class="social-buttons">
+                            <div class="social-buttons__button">
+                                <a href="/" class="social-buttons__link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.44 12.44"><g id="Layer_1" data-name="Layer 1"><path class="facebook-back" d="M10.07,12.42l-7.65,0A2.39,2.39,0,0,1,0,10.07L0,2.42A2.39,2.39,0,0,1,2.38,0L10,0a2.39,2.39,0,0,1,2.39,2.38l0,7.65A2.39,2.39,0,0,1,10.07,12.42Z"/><path class="facebook-logo" d="M9.13,12.42H7l0-5.25H5.86V5.38H6.94V4.29A2,2,0,0,1,9.28,1.93h1.45V3.73H9.83c-.68,0-.72.25-.72.72v.91h1.64l-.19,1.81H9.12l0,5.25Z"/></g></svg>
+                                </a>
+                            </div>
+
+                            <div class="social-buttons__button">
+                                <a href="/" class="social-buttons__link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.44 12.45"><g id="Layer_1" data-name="Layer 1"><path class="vk-back" d="M10.07,12.42l-7.65,0A2.39,2.39,0,0,1,0,10.07L0,2.42A2.38,2.38,0,0,1,2.38,0L10,0a2.38,2.38,0,0,1,2.39,2.38l0,7.65A2.38,2.38,0,0,1,10.07,12.42Z"/><path class="vk-logo" d="M11.15,8.65l0-.06a5.13,5.13,0,0,0-1-1.15h0c-.22-.21-.37-.35-.42-.43a.41.41,0,0,1-.08-.42,3.94,3.94,0,0,1,.47-.68l.34-.44q.9-1.2.78-1.54l0-.05A.3.3,0,0,0,11,3.77a.82.82,0,0,0-.33,0l-1.5,0a.17.17,0,0,0-.1,0H9l0,0-.06.05A.38.38,0,0,0,8.82,4a8.64,8.64,0,0,1-.55,1.17c-.13.22-.25.4-.35.56a2.47,2.47,0,0,1-.27.35l-.2.18c-.06,0-.1.06-.13.06l-.09,0a.32.32,0,0,1-.12-.13A.53.53,0,0,1,7,5.94c0-.08,0-.15,0-.21s0-.14,0-.25,0-.18,0-.22S7,5,7,4.83s0-.28,0-.37,0-.18,0-.29a1.14,1.14,0,0,0,0-.24A.74.74,0,0,0,7,3.77a.28.28,0,0,0-.11-.12L6.7,3.58A3.64,3.64,0,0,0,6,3.51a3.47,3.47,0,0,0-1.25.13.69.69,0,0,0-.2.16c-.06.08-.07.12,0,.13A.64.64,0,0,1,5,4.15l0,.06a1,1,0,0,1,.07.24,2.5,2.5,0,0,1,0,.38,4.14,4.14,0,0,1,0,.65c0,.18,0,.32,0,.42A.92.92,0,0,1,5,6.15l-.06.12,0,0-.14,0a.34.34,0,0,1-.18-.07A1.18,1.18,0,0,1,4.38,6a2.87,2.87,0,0,1-.25-.36,6.14,6.14,0,0,1-.29-.54L3.75,5l-.22-.43c-.09-.19-.17-.37-.24-.54a.36.36,0,0,0-.13-.17h0l-.08,0-.12,0H1.51a.36.36,0,0,0-.3.1l0,0a.19.19,0,0,0,0,.08.43.43,0,0,0,0,.14c.21.49.44,1,.68,1.41s.46.82.64,1.1.37.54.55.79l.37.47.14.16.13.12a3.27,3.27,0,0,0,.37.3,6.35,6.35,0,0,0,.54.34,2.82,2.82,0,0,0,.69.27,2.35,2.35,0,0,0,.76.08h.6A.4.4,0,0,0,7,9.08L7,9A.34.34,0,0,0,7,9a.48.48,0,0,0,0-.14,1.68,1.68,0,0,1,0-.41,1,1,0,0,1,.09-.27A.61.61,0,0,1,7.28,8l.09-.07,0,0A.33.33,0,0,1,7.71,8a1.77,1.77,0,0,1,.32.3l.36.4A2.48,2.48,0,0,0,8.75,9l.11.06a1.42,1.42,0,0,0,.27.11.63.63,0,0,0,.29,0l1.33,0a.6.6,0,0,0,.31-.07A.25.25,0,0,0,11.19,9a.37.37,0,0,0,0-.18A.61.61,0,0,0,11.15,8.65Z"/></g></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bottom-menu">
+                        <div class="bottom-menu__element">
+                            <a href="/" class="bottom-menu__link">Карта сайта</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__copy">
+                Любая информация, представленная на данном сайте, носит исключительно информационный характер и ни при каких условиях не является публичной офертой.
+            </div>
+
+            <div class="footer__medialine">
+                Разработано в <a href="/">Медиа Лайн</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

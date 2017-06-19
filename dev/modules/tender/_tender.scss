@@ -1,0 +1,34 @@
+.tender {
+    display: flex;
+    padding: 40px 0;
+    line-height: 1.2;
+    align-items: stretch;
+
+    &__header {
+        display: flex;
+        padding-top: 40px;
+        line-height: 1.2;
+    }
+
+    &__option {
+        min-width: 16.6%;
+        width: 16.6%;
+        font-size: 13px;
+        font-weight: 500;
+
+        &_name {
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        &_step {
+            display: flex;
+            flex-direction: column;
+
+            .button {
+                margin-top: auto;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@import "./../../scss/_variables.scss";
+@import "./../../modules/employee/_employee.scss";
+
+.employees {
+    margin-bottom: 70px;
+
+    .employee {
+        min-width: 20%;
+        width: 20%;
+    }
+
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+
+        &_center {
+            justify-content: center;
+
+            .employee {
+                min-width: 22%;
+                width: 22%;
+            }
+        }
+    }
+}
+
+
+@media (max-width: $tablet-point) {
+    .employees {
+        .employee {
+            min-width: 33.3%;
+            width: 33.3%;
+        }
+
+        &__wrap {
+            justify-content: left;
+
+            &_center {
+                justify-content: center;
+
+                .employee {
+                    min-width: 33.3%;
+                    width: 33.3%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .employees {
+        .employee {
+            min-width: 50%;
+            width: 50%;
+        }
+
+        &__wrap {
+            justify-content: space-between;
+
+            &_center {
+                justify-content: center;
+
+                .employee {
+                    min-width: 55%;
+                    width: 55%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@import "./../../scss/_variables.scss";
+
+.time {
+    position: relative;
+
+    &__clock {
+        width: 23px;
+        position: absolute;
+        top: 15px;
+        left: -30px;
+    }
+
+    &__time {
+        display: flex;
+        font-size: 36px;
+        font-weight: 500;
+    }
+
+    &__day {
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    &__date {
+        font-weight: 700;
+        font-size: 15px;
+    }
+}

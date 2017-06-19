@@ -5,23 +5,31 @@
     <meta charset="utf-8">
 
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
-
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="./lib/isMobile.min.js"></script>
+    <script src="./lib/slick.min.js"></script>
+    <script src="./lib/odometer.min.js"></script>
 
     <script src="./js/common.js"></script>
     <script src="./js/top-menu.js"></script>
+    <script src="./js/project-detail.js"></script>
+    <script src="./js/numbers-animation.js"></script>
+    <script src="./js/map.js"></script>
 
 
+
+    <link href="./lib/slick.css" rel="stylesheet">
+    <link href="./lib/odometer-default.css" rel="stylesheet">
 
     <link href="./css/common.css" rel="stylesheet">
     <link href="./css/social-buttons.css" rel="stylesheet">
     <link href="./css/top-menu.css" rel="stylesheet">
-    <link href="./css/news-detail.css" rel="stylesheet">
     <link href="./css/bottom-menu.css" rel="stylesheet">
     <link href="./css/breadcrumbs.css" rel="stylesheet">
-    <link href="./css/pagination.css" rel="stylesheet">
+    <link href="./css/project-detail.css" rel="stylesheet">
+    <link href="./css/numbers-animation.css" rel="stylesheet">
+    <link href="./css/map.css" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -121,43 +129,152 @@
             </a>
 
             <span class="breadcrumbs__element">
-                Новости
+                Проекты
             </span>
         </div>
     </div>
 
     <div class="page">
-        <div class="container container_small">
-            <article class="news-detail">
-                <div class="news-detail__date">
-                    23.04.2017
+        <div class="container">
+            <div class="project-detail">
+                <div class="two-column">
+                    <div class="two-column__column">
+                        <div class="related-sliders">
+                            <div class="related-sliders__main">
+                                <div class="related-sliders__main-slide">
+                                    <div class="related-sliders__main-img" style="background-image: url('./images/project1.jpg');">
+
+                                    </div>
+                                </div>
+
+                                <div class="related-sliders__main-slide">
+                                    <div class="related-sliders__main-img" style="background-image: url('./images/project2.jpg');">
+
+                                    </div>
+                                </div>
+
+                                <div class="related-sliders__main-slide">
+                                    <div class="related-sliders__main-img" style="background-image: url('./images/project3.jpg');">
+
+                                    </div>
+                                </div>
+
+                                <div class="related-sliders__main-slide">
+                                    <div class="related-sliders__main-img" style="background-image: url('./images/project4.jpg');">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="related-sliders__control">
+                                <div class="related-sliders__control-slide">
+                                    <div class="related-sliders__control-img" style="background-image: url('./images/project1.jpg');">
+                                    </div>
+
+                                    <div class="related-sliders__control-blackout"></div>
+                                </div>
+
+                                <div class="related-sliders__control-slide">
+                                    <div class="related-sliders__control-img" style="background-image: url('./images/project2.jpg');">
+                                    </div>
+
+                                    <div class="related-sliders__control-blackout"></div>
+                                </div>
+
+                                <div class="related-sliders__control-slide">
+                                    <div class="related-sliders__control-img" style="background-image: url('./images/project3.jpg');">
+                                    </div>
+
+                                    <div class="related-sliders__control-blackout"></div>
+                                </div>
+
+                                <div class="related-sliders__control-slide">
+                                    <div class="related-sliders__control-img" style="background-image: url('./images/project4.jpg');">
+                                    </div>
+
+                                    <div class="related-sliders__control-blackout"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="two-column__column">
+                        <div class="project-detail__title">
+                            Бизнес-центр «A-100»
+                        </div>
+
+                        <div class="project-detail__site">
+                            <a href="/">www.bc.dev.a-100.by</a>
+                        </div>
+
+                        <div class="project-detail__description">
+                            Концепция проекта: современный 7-этажный бизнес-центр. Основной задачей при строительстве бизнес-центра «А-100» было создание идеальных условий для работы. Учитывались все самые современные требования, предъявляемые к бизнес-центрам, использовались новейшие технологии.
+                        </div>
+                    </div>
                 </div>
 
-                <div class="news-detail__title">
-                    Предоставляем скидку 3% на квартиры в зелёном бору!
+                <div class="numbers-animation  numbers-animation_two">
+                    <div class="numbers-animation__number">
+                        <div class="numbers-animation__number-value">
+                            <span class="numbers-animation__number-js">4709.6</span>
+                        </div>
+
+                        <div class="numbers-animation__unit">
+                            м2
+                        </div>
+
+                        <div class="numbers-animation__number-text">
+                            Общая площадь
+                        </div>
+                    </div>
+
+                    <div class="numbers-animation__number">
+                        <div class="numbers-animation__number-value">
+                            <span class="numbers-animation__number-js">2015</span>
+                        </div>
+
+                        <div class="numbers-animation__unit">
+
+                        </div>
+
+                        <div class="numbers-animation__number-text">
+                            Год сдачи проекта
+                        </div>
+                    </div>
                 </div>
 
-                <div class="news-detail__content">
-                    <img src="./images/house.jpg" style="float: left;" class="bottom right">
-
-                    <p>
-                        Вам не нравится излишняя загазованность и духота больших городов, но при этом хочется европейского комфорта? Отличная новость! Мы предоставляем скидку в 3% для всех обладателей Боровлянской и Логойской прописки на покупку квартиры в Зеленом бору. Прекрасный повод, чтобы начать новую жизнь, найден!
-                    </p>
-
-                    <p style="font-weight: 500;">
-                        Узнайте подробности!<br>
-                        <a href="tel:+375293000000">+375 (29) 300 00 00</a><br>
-                        <a href="tel:+375291328328">+375 (29) 1 328 328</a><br>
-                        <a href="tel:+375295550001">+375 (29) 5 550 001</a><br>
-                        понедельник–пятница: 8:30–20:00<br>
-                        суббота, воскресенье: 10:00–16:00<br>
-                    </p>
+                <div>
+                    Концепция проекта: современный 7-этажный бизнес-центр. Основной задачей при строительстве бизнес-центра «А-100» было создание идеальных условий для работы. Учитывались все самые современные требования, предъявляемые к бизнес-центрам, использовались новейшие технологии. Кроме бизнес площадей оснащен вместительной автопарковкой (на 120 машиномест, также имеется дополнительная гостевая парковка) и уютным кафе. Все помещения сдаются с отделкой, поэтому переехать в новый офис можно в кратчайшие сроки.
+                    В здании круглосуточно работает охрана, что исключает несанкционированный доступ третьих лиц в ваш офис. Все работы по эксплуатации здания берет на себя специально созданная управляющая компания, что освобождает арендаторов от лишних забот и расходов.
                 </div>
 
-                <a href="/" class="button">
-                    Вернуться к списку
-                </a>
-            </article>
+                <div class="project-detail__object-title">
+                    Объект на карте
+                </div>
+
+                <div class="two-column">
+                    <div class="two-column__column">
+                        <div class="map">
+                            <div class="map__js map__js_project" id="map__js"></div>
+                        </div>
+                    </div>
+
+                    <div class="two-column__column">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 325.469 325.469" style="enable-background:new 0 0 325.469 325.469;" xml:space="preserve">
+                            <path style="fill:#030303;" d="M162.749,325.469l-13.297-14.123c-18.747-19.933-112.25-122.571-112.25-185.815
+                            C37.201,56.308,93.518,0,162.737,0c69.208,0,125.525,56.316,125.53,125.53c0,64.605-100.769,173.597-112.256,185.815
+                            L162.749,325.469z M162.743,11.705c-62.767,0-113.826,51.062-113.826,113.819c0,60.082,97.907,165.923,109.065,177.788
+                            l4.754,5.055l4.755-5.05c40.512-43.067,109.077-128.986,109.077-177.793C276.563,62.767,225.501,11.705,162.743,11.705z"/>
+
+                            <path style="fill:#030303;" d="M162.743,180.906c-30.534,0-55.379-24.842-55.379-55.376c0-30.537,24.845-55.379,55.379-55.379
+                            c30.525,0,55.365,24.842,55.376,55.379C218.119,156.064,193.28,180.906,162.743,180.906z M162.743,81.862
+                            c-24.081,0-43.668,19.593-43.668,43.668c0,24.076,19.593,43.666,43.668,43.666c24.076,0,43.666-19.59,43.666-43.666
+                            C206.397,101.449,186.819,81.862,162.743,81.862z"/></svg> ул. Гинтовта, 1, г. Минск, Беларусь<br>
+                        Контакты: тел. <a href="tel:+375293050151">+375293050151</a>, <a href="tel:+375291336688">+375291336688</a><br>
+                        e-mail: <a href="mailto:romanovich@a-100.by">romanovich@a-100.by</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

@@ -11,6 +11,18 @@
         padding-bottom: 30px;
         text-align: center;
         font-weight: 500;
+
+        img {
+            vertical-align: middle;
+            margin: 0 15px;
+            max-width: 50px;
+        }
+    }
+
+    &__title-description {
+        font-weight: 300;
+        font-size: 15px;
+        text-transform: none;
     }
 
     a {
@@ -47,6 +59,8 @@
 
     &__check {
         li {
+            padding-bottom: 15px;
+
             &:before {
                 display: inline-block;
                 height: 7px;
@@ -59,6 +73,24 @@
                 transform: rotate(-50deg);
                 vertical-align: top;
                 top: 2px;
+            }
+        }
+    }
+
+    &_without-padding {
+        padding: 0;
+    }
+
+    &__font-medium {
+        font-weight: 500;
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .page {
+        &__title {
+            img {
+                max-width: 30px;
             }
         }
     }

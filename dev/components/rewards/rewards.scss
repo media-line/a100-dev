@@ -1,0 +1,71 @@
+@import "./../../scss/_variables.scss";
+@import "./../../modules/reward/_reward.scss";
+
+.rewards {
+    border-top: 2px solid $black;
+    border-bottom: 2px solid $black;
+    padding-top: 30px;
+    position: relative;
+
+    &__wrap {
+        padding-bottom: 25px;
+    }
+
+    &__toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        display: inline-block;
+        height: 23px;
+        width: 28px;
+
+        &:after {
+            height: 20px;
+            width: 2px;
+            content: '';
+            background-color: $black;
+            display: inline-block;
+            transition: 0.4s;
+            transform: translate(-6px, 0) rotate(-45deg);
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        &:before {
+            height: 20px;
+            width: 2px;
+            content: '';
+            background-color: $black;
+            display: inline-block;
+            transform: translate(6px, 0) rotate(45deg);
+            transition: 0.4s;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        &_active {
+            &:after {
+                transform: translate(-20px, 0) rotate(-45deg);
+            }
+
+            &:before {
+                transform: translate(20px, 0) rotate(45deg);
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .rewards {
+        .page__title {
+            text-align: left;
+        }
+
+        &__toggle {
+            top: 38px;
+        }
+    }
+}

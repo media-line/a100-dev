@@ -1,5 +1,4 @@
 .header {
-    height: 800px;
     background-size: cover;
     background-position: center;
     line-height: 1;
@@ -13,6 +12,7 @@
         right: 0;
         height: 50%;
         background: linear-gradient(to bottom, rgba($black, 0.5), transparent);
+        z-index: 1;
     }
 
     &__icons {
@@ -202,6 +202,16 @@
         text-align: right;
         display: none;
     }
+
+    &_mainpage {
+        .header__wide-block {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 7;
+        }
+    }
 }
 
 @media (max-width: $big-device-point) {
@@ -244,7 +254,7 @@
             .top-menu {
                 border-top: 1px solid $black;
                 border-bottom: 1px solid $black;
-            }    
+            }
         }
 
         &__logo {

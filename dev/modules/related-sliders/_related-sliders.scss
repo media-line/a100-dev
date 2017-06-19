@@ -1,0 +1,111 @@
+.related-sliders {
+
+    &__main {
+        margin-bottom: 6px;
+    }
+
+    &__main-slide {
+        outline: none;
+        text-align: center;
+        position: relative;
+        height: 380px;
+
+        img {
+            max-width: 100%;
+            display: inline-block !important;
+        }
+    }
+
+    &__main-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__control {
+        margin: 0 -2px;
+    }
+
+    &__control-blackout {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($black, 0.3);
+        opacity: 0;
+        transition: 0.4s;
+    }
+
+    &__control-img {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: 0.4s;
+    }
+
+    &__control-slide {
+        outline: none;
+        overflow: hidden;
+        margin: 0 3px;
+        position: relative;
+        height: 75px;
+        cursor: pointer;
+
+        &:hover {
+            .related-sliders__control-img {
+                transform: scale(1.1);
+            }
+
+            .related-sliders__control-blackout {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        margin-top: -8px;
+        z-index: 1;
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        background-color: transparent;
+        display: inline-block;
+        border-left: 2px solid $black;
+        border-bottom: 2px solid $black;
+        border-right: 2px solid transparent;
+        border-top: 2px solid transparent;
+        transform: rotate(45deg);
+        transition: 0.5s;
+        outline: none;
+
+        &_prev {
+            left: -15px;
+        }
+
+        &_next {
+            right: -15px;
+        }
+
+        &:hover {
+            border-left: 2px solid rgba($black, 0.3);
+            border-bottom: 2px solid rgba($black, 0.3);
+        }
+
+        &_next {
+            transform: rotate(-135deg);
+        }
+    }
+}

@@ -5,23 +5,22 @@
     <meta charset="utf-8">
 
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
-
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-
     <script src="./lib/isMobile.min.js"></script>
 
     <script src="./js/common.js"></script>
     <script src="./js/top-menu.js"></script>
+    <script src="./js/time.js"></script>
 
 
 
     <link href="./css/common.css" rel="stylesheet">
     <link href="./css/social-buttons.css" rel="stylesheet">
     <link href="./css/top-menu.css" rel="stylesheet">
-    <link href="./css/news-detail.css" rel="stylesheet">
     <link href="./css/bottom-menu.css" rel="stylesheet">
     <link href="./css/breadcrumbs.css" rel="stylesheet">
-    <link href="./css/pagination.css" rel="stylesheet">
+    <link href="./css/time.css" rel="stylesheet">
+    <link href="./css/tenders.css" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -121,43 +120,154 @@
             </a>
 
             <span class="breadcrumbs__element">
-                Новости
+                Тендеры
             </span>
         </div>
     </div>
 
     <div class="page">
-        <div class="container container_small">
-            <article class="news-detail">
-                <div class="news-detail__date">
-                    23.04.2017
+        <div class="container">
+            <div class="page__title">
+                Тендеры
+            </div>
+
+            <div class="tenders">
+                <div class="container container_small">
+                    <div class="tenders__header">
+                        <div class="time">
+                            <img src="./images/clock.png" class="time__clock">
+
+                            <div class="time__time">
+                                <div class="time__hours"></div>:
+                                <div class="time__minutes"></div>:
+                                <div class="time__seconds"></div>
+                            </div>
+                            <div class="time__day"></div>
+                            <div class="time__date"></div>
+                        </div>
+
+                        <div class="tenders__info">
+                            <span class="page__font-medium">TКО</span> - Тендер с предварительным квалификационным отбором<br>
+                            <span class="page__font-medium">ОК</span> - Открытый конкурс<br>
+                            <span class="page__font-medium">ЗК</span> - Закрытый конкурс<br>
+                            <span class="page__font-medium">ЦК</span> - Ценовые котировки<br>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="news-detail__title">
-                    Предоставляем скидку 3% на квартиры в зелёном бору!
-                </div>
 
-                <div class="news-detail__content">
-                    <img src="./images/house.jpg" style="float: left;" class="bottom right">
+                    <div class="tenders__list">
+                        <div class="tender__header">
+                            <div class="tender__option">
+                                Форма тендера
+                            </div>
 
-                    <p>
-                        Вам не нравится излишняя загазованность и духота больших городов, но при этом хочется европейского комфорта? Отличная новость! Мы предоставляем скидку в 3% для всех обладателей Боровлянской и Логойской прописки на покупку квартиры в Зеленом бору. Прекрасный повод, чтобы начать новую жизнь, найден!
-                    </p>
+                            <div class="tender__option">
+                                Код тендера
+                            </div>
 
-                    <p style="font-weight: 500;">
-                        Узнайте подробности!<br>
-                        <a href="tel:+375293000000">+375 (29) 300 00 00</a><br>
-                        <a href="tel:+375291328328">+375 (29) 1 328 328</a><br>
-                        <a href="tel:+375295550001">+375 (29) 5 550 001</a><br>
-                        понедельник–пятница: 8:30–20:00<br>
-                        суббота, воскресенье: 10:00–16:00<br>
-                    </p>
-                </div>
+                            <div class="tender__option">
+                                Предмет тендера
+                            </div>
 
-                <a href="/" class="button">
-                    Вернуться к списку
-                </a>
-            </article>
+                            <div class="tender__option">
+                                Начало приема заявок
+                            </div>
+
+                            <div class="tender__option">
+                                Окончание тендера
+                            </div>
+
+                            <div class="tender__option">
+                                Стадия тендера
+                            </div>
+                        </div>
+
+                        <div class="tender">
+                            <div class="tender__option tender__option_form">
+                                ЦК
+                            </div>
+
+                            <div class="tender__option tender__option_code">
+                                011
+                            </div>
+
+                            <div class="tender__option tender__option_name">
+                                Выбор системы лифтового оборудования для объекта "Жилой дом с подземной автостоянккой"
+                            </div>
+
+                            <div class="tender__option tender__option_start">
+                                01.03.2017
+                            </div>
+
+                            <div class="tender__option tender__option_end">
+                                30.07.2017
+                            </div>
+
+                            <div class="tender__option tender__option_step">
+                                Прием заявок
+
+                                <a href="/" class="button">Подробнее</a>
+                            </div>
+                        </div>
+
+                        <div class="tender">
+                            <div class="tender__option tender__option_form">
+                                ЦК
+                            </div>
+
+                            <div class="tender__option tender__option_code">
+                                011
+                            </div>
+
+                            <div class="tender__option tender__option_name">
+                                Выбор системы лифтового оборудования для объекта "Жилой дом с подземной автостоянккой"
+                            </div>
+
+                            <div class="tender__option tender__option_start">
+                                01.03.2017
+                            </div>
+
+                            <div class="tender__option tender__option_end">
+                                30.07.2017
+                            </div>
+
+                            <div class="tender__option tender__option_step">
+                                Прием заявок
+
+                                <a href="/" class="button">Подробнее</a>
+                            </div>
+                        </div>
+
+                        <div class="tender">
+                            <div class="tender__option tender__option_form">
+                                ЦК
+                            </div>
+
+                            <div class="tender__option tender__option_code">
+                                011
+                            </div>
+
+                            <div class="tender__option tender__option_name">
+                                Выбор системы лифтового оборудования для объекта "Жилой дом с подземной автостоянккой"
+                            </div>
+
+                            <div class="tender__option tender__option_start">
+                                01.03.2017
+                            </div>
+
+                            <div class="tender__option tender__option_end">
+                                30.07.2017
+                            </div>
+
+                            <div class="tender__option tender__option_step">
+                                Прием заявок
+
+                                <a href="/" class="button">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
         </div>
     </div>
 

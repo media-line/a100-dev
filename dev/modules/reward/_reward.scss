@@ -1,0 +1,35 @@
+.reward {
+    display: flex;
+    padding: 15px 0;
+
+    &__img {
+        min-width: 20%;
+        width: 20%;
+        text-align: center;
+
+        img {
+            max-width: 80%;
+        }
+    }
+
+    &__info {
+        width: 100%;
+    }
+
+    &__date {
+        font-weight: 700;
+        font-size: 13px;
+    }
+
+    &__name {
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding-bottom: 20px;
+    }
+
+    &__text {
+        font-size: 15px;
+        font-weight: 300;
+    }
+}

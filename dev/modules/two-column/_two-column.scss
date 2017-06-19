@@ -35,7 +35,7 @@
     }
 
     &_padding {
-        padding: 50px 0 90px 0;
+        padding: 50px 0;
     }
 
     &_padding-small {
@@ -66,8 +66,16 @@
             width: 100%;
             max-width: 100%;
 
+            &:first-child {
+                padding-right: 0;
+            }
+
             & + .two-column__column {
                 margin-top: 15px;
+            }
+
+            &_padding-left {
+                padding-left: 0px !important;
             }
         }
 

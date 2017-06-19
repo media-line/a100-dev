@@ -118,7 +118,7 @@
     </header>
 
     <div class="breadcrumbs">
-        <div class="container">
+        <div class="container container_responsive">
             <a href="/" class="breadcrumbs__link">
                 Главная
             </a>
@@ -129,87 +129,78 @@
         </div>
     </div>
 
-    <div class="page">
-        <div class="container container_small">
-            <div class="page__title">
-                Контакты
-            </div>
+    <div class="page page_without-padding">
+        <div class="map">
+            <div class="map__content">
+                <p>223053, Минский р-н, д. Боровая, 7</p>
+                <p>Тел./факс: <a href="tel:+375172333333">+375-17-233-33-33</a></p>
+                <p>Моб: <a href="tel:+375296233333">+375-29-623-33-33</a>, <a href="tel:+375297733033">+375-29-773-30-33</a></p>
+                <p>e-mail: <a href="mailto:a-100@a-100.by">a-100@a-100.by</a></p>
+                <p>Адрес для отправки коммерческих предложений по рекламе: <a href="mailto:rk@a-100.by">rk@a-100.by</a></p>
+                <p>Для предложения строительных материалов воспользуйтесь разделом Тендеры</p>
+                <p>Телефон отдела продаж квартир:</br>
+                <a href="tel:+375293000000">+375 29 300 00 00</a></br>
+                (вы также можете бесплатно позвонить</br>
+                на этот номер через Viber)</p>
+                <p></p>
+                <button class="button modal__button" data-modal-button="callback">Написать письмо</button>
+                <div class="modal" data-modal="callback">
+                    <div class="modal__wrapper">
+                        <div class="modal__block">
+                            <div class="modal__body">
+                                <div class="modal__close">
+                                    <svg width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
+                                      <g>
+                                        <path class="svg-cross" d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"/>
+                                      </g>
+                                    </svg>
+                                </div>
 
-            <div class="two-column">
-                <div class="two-column__column two-column__column_small">
-                    <p>223053, Минский р-н, д. Боровая, 7</p>
-                    <p>Тел./факс: <a href="tel:+375172333333">+375-17-233-33-33</a></p>
-                    <p>Моб: <a href="tel:+375296233333">+375-29-623-33-33</a>, <a href="tel:+375297733033">+375-29-773-30-33</a></p>
-                    <p>e-mail: <a href="mailto:a-100@a-100.by">a-100@a-100.by</a></p>
-                    <p>Адрес для отправки коммерческих предложений по рекламе: <a href="mailto:rk@a-100.by">rk@a-100.by</a></p>
-                    <p>Для предложения строительных материалов воспользуйтесь разделом Тендеры</p>
-                    <p>Телефон отдела продаж квартир:</br>
-                    <a href="tel:+375293000000">+375 29 300 00 00</a></br>
-                    (вы также можете бесплатно позвонить</br>
-                    на этот номер через Viber)</p>
-                    <p></p>
-                    <button class="button modal__button" data-modal-button="callback">Написать письмо</button>
-                    <div class="modal" data-modal="callback">
-                        <div class="modal__wrapper">
-                            <div class="modal__block">
-                                <div class="modal__body">
-                                    <div class="modal__close">
-                                        <svg width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
-                                          <g>
-                                            <path class="svg-cross" d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"/>
-                                          </g>
-                                        </svg>
+                                <form class="form form_callback">
+                                    <div class="form__name">
+                                        Написать письмо
                                     </div>
 
-                                    <form class="form form_callback">
-                                        <div class="form__name">
-                                            Написать письмо
+                                    <div class="form__block">
+                                        <div class="form__title">
+                                            Имя:
                                         </div>
 
-                                        <div class="form__block">
-                                            <div class="form__title">
-                                                Имя:
-                                            </div>
+                                        <div class="form__field">
+                                            <input type="text">
+                                        </div>
+                                    </div>
 
-                                            <div class="form__field">
-                                                <input type="text">
-                                            </div>
+                                    <div class="form__block">
+                                        <div class="form__title">
+                                            Электронная почта:
                                         </div>
 
-                                        <div class="form__block">
-                                            <div class="form__title">
-                                                Электронная почта:
-                                            </div>
+                                        <div class="form__field">
+                                            <input type="text">
+                                        </div>
+                                    </div>
 
-                                            <div class="form__field">
-                                                <input type="text">
-                                            </div>
+                                    <div class="form__block">
+                                        <div class="form__title">
+                                            Сообщение:
                                         </div>
 
-                                        <div class="form__block">
-                                            <div class="form__title">
-                                                Сообщение:
-                                            </div>
-
-                                            <div class="form__field">
-                                                <textarea></textarea>
-                                            </div>
+                                        <div class="form__field">
+                                            <textarea></textarea>
                                         </div>
+                                    </div>
 
-                                        <div class="form__button">
-                                            <button class="button">Отправить</button>
-                                        </div>
-                                    </form>
-                                </div>
+                                    <div class="form__button">
+                                        <button class="button">Отправить</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="two-column__column two-column__column_big">
-                    <div class="map map_contacts" id="map"></div>
-                </div>
             </div>
+            <div class="map__js" id="map__js"></div>
         </div>
     </div>
 

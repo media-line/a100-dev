@@ -1,0 +1,52 @@
+@import "./../../scss/_variables.scss";
+
+
+.slider {
+    &__slide {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .slick-dots {
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        right: 60px;
+        bottom: 0;
+        display: flex !important;
+        align-items: flex-end;
+        justify-content: center;
+        flex-direction: column;
+
+        li {
+            text-align: right;
+
+            &.slick-active {
+                button {
+                    background-color: rgba($white, 0.9);
+                    box-shadow: 1px 1px 3px $black;
+                }
+            }
+        }
+
+        button {
+            font-size: 0;
+            width: 17px;
+            height: 17px;
+            border-radius: 100%;
+            background-color: rgba($white, 0.6);
+            border: none;
+            margin: 20px 0;
+            box-shadow: 3px 3px 5px $black;
+            outline: none;
+            cursor: pointer;
+            transition: 0.4s;
+
+            &:hover {
+                background-color: rgba($white, 0.9);
+                box-shadow: 1px 1px 3px $black;
+            }
+        }
+    }
+}

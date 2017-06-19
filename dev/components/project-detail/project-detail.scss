@@ -1,0 +1,44 @@
+@import "./../../scss/_variables.scss";
+@import "./../../modules/related-sliders/_related-sliders.scss";
+
+.project-detail {
+    .related-sliders {
+        display: inline-block;
+        width: 90%;
+    }
+
+    &__title {
+        font-size: 26px;
+        font-weight: 500;
+    }
+
+    &__site {
+        margin-bottom: 20px;
+    }
+
+    .numbers-animation {
+        padding-bottom: 20px;
+    }
+
+    &__object-title {
+        font-size: 23px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 35px 25px;
+    }
+
+    svg {
+        width: 15px;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .project-detail {
+        .related-sliders {
+            width: 100%;
+        }
+    }
+}

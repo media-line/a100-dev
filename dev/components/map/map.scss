@@ -2,12 +2,24 @@
 
 
 .map {
-    &_contacts {
+    position: relative;
+
+    &__js {
+        height: 400px;
+
+        &_project {
+            height: 320px;
+        }
+    }
+
+    &__content {
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        top: 20px;
+        z-index: 1;
+        display: inline-block;
+        background-color: $white;
+        padding: 20px;
+        box-sizing: border-box;
     }
 
     .ymaps-2-1-50-ground-pane {
@@ -15,12 +27,19 @@
     }
 }
 
+@media (max-width: $tablet-point) {
+    .map {
+        &__content {
+            position: relative;
+            top: 0;
+        }
+    }
+}
 
 @media (max-width: $mobile-point) {
     .map {
-        &_contacts {
-            position: relative;
-            height: 400px;
+        &__content {
+            left: 0 !important;
         }
     }
 }

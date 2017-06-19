@@ -1,8 +1,18 @@
 'use strict';
 
-let $header = '.header_first-screen';
+const $slider = '.slider';
+const $header = '.slider__slide';
 
 $(document).ready(function () {
+    $($slider).slick({
+        fade: true,
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: false,
+        dots: true,
+    });
+
     if ($($header).length > 0) {
         let windowHeight;
         windowHeight = $(window).outerHeight();

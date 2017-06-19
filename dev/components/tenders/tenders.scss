@@ -1,0 +1,20 @@
+@import "./../../scss/_variables.scss";
+@import "./../../modules/tender/_tender.scss";
+
+.tenders {
+    &__header {
+        display: flex;
+    }
+
+    &__info {
+        padding-top: 8px;
+    }
+
+    .time {
+        margin-right: 200px;
+    }
+
+    .tender + .tender {
+        border-top: 1px solid $black;
+    }
+}

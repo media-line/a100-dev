@@ -5,23 +5,22 @@
     <meta charset="utf-8">
 
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
-
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="./lib/isMobile.min.js"></script>
 
     <script src="./js/common.js"></script>
     <script src="./js/top-menu.js"></script>
+    <script src="./js/project-map.js"></script>
 
 
 
     <link href="./css/common.css" rel="stylesheet">
     <link href="./css/social-buttons.css" rel="stylesheet">
     <link href="./css/top-menu.css" rel="stylesheet">
-    <link href="./css/news-detail.css" rel="stylesheet">
     <link href="./css/bottom-menu.css" rel="stylesheet">
     <link href="./css/breadcrumbs.css" rel="stylesheet">
-    <link href="./css/pagination.css" rel="stylesheet">
+    <link href="./css/project-map.css" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -120,44 +119,36 @@
                 Главная
             </a>
 
+            <a href="/" class="breadcrumbs__link">
+                Проекты
+            </a>
+
             <span class="breadcrumbs__element">
-                Новости
+                Объекты на карте
             </span>
         </div>
     </div>
 
     <div class="page">
-        <div class="container container_small">
-            <article class="news-detail">
-                <div class="news-detail__date">
-                    23.04.2017
+        <div class="container">
+            <div class="page__title">
+                Объекты на карте
+            </div>
+
+            <div class="project-map">
+                <div class="project-map__filter">
+                    <div class="project-map__filter-element">
+                        <img src="./images/marker.png"> Жилая недвижимость
+                    </div>
+                    <div class="project-map__filter-element">
+                        <img src="./images/marker1.png"> Коммерческая недвижимость
+                    </div>
                 </div>
 
-                <div class="news-detail__title">
-                    Предоставляем скидку 3% на квартиры в зелёном бору!
+                <div class="project-map__js" id="project-map__js">
+
                 </div>
-
-                <div class="news-detail__content">
-                    <img src="./images/house.jpg" style="float: left;" class="bottom right">
-
-                    <p>
-                        Вам не нравится излишняя загазованность и духота больших городов, но при этом хочется европейского комфорта? Отличная новость! Мы предоставляем скидку в 3% для всех обладателей Боровлянской и Логойской прописки на покупку квартиры в Зеленом бору. Прекрасный повод, чтобы начать новую жизнь, найден!
-                    </p>
-
-                    <p style="font-weight: 500;">
-                        Узнайте подробности!<br>
-                        <a href="tel:+375293000000">+375 (29) 300 00 00</a><br>
-                        <a href="tel:+375291328328">+375 (29) 1 328 328</a><br>
-                        <a href="tel:+375295550001">+375 (29) 5 550 001</a><br>
-                        понедельник–пятница: 8:30–20:00<br>
-                        суббота, воскресенье: 10:00–16:00<br>
-                    </p>
-                </div>
-
-                <a href="/" class="button">
-                    Вернуться к списку
-                </a>
-            </article>
+            </div>
         </div>
     </div>
 

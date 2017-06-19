@@ -10,13 +10,15 @@
 
     <script src="./lib/isMobile.min.js"></script>
     <script src="./lib/odometer.min.js"></script>
+    <script src="./lib/slick.min.js"></script>
 
     <script src="./js/common.js"></script>
     <script src="./js/top-menu.js"></script>
     <script src="./js/numbers-animation.js"></script>
+    <script src="./js/slider.js"></script>
 
 
-
+    <link href="./lib/slick.css" rel="stylesheet">
     <link href="./lib/odometer-default.css" rel="stylesheet">
 
     <link href="./css/common.css" rel="stylesheet">
@@ -26,13 +28,14 @@
     <link href="./css/news-preview.css" rel="stylesheet">
     <link href="./css/bottom-menu.css" rel="stylesheet">
     <link href="./css/numbers-animation.css" rel="stylesheet">
+    <link href="./css/slider.css" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--[if lte IE 9]><script src="<a href="http://phpbbex.com/oldies/oldies.js">http://phpbbex.com/oldies/oldies.js</a>" charset="utf-8"></script><![endif]-->
 </head>
 <body>
-    <header class="header header_first-screen" style="background-image: url(./images/slide1.jpg);">
+    <header class="header header_first-screen header_mainpage">
         <div class="header__wide-block">
             <div class="container container_responsive">
                 <div class="header__wrap">
@@ -116,6 +119,11 @@
                 </div>
             </div>
         </div>
+
+        <div class="slider">
+            <div class="slider__slide" style="background-image: url(./images/slide1.jpg);"></div>
+            <div class="slider__slide" style="background-image: url(./images/slide2.jpg);"></div>
+        </div>
     </header>
 
     <div class="container container_small">
@@ -165,7 +173,7 @@
                     </div>
 
                     <div class="numbers-animation__unit">
-                        
+
                     </div>
 
                     <div class="numbers-animation__number-text">
