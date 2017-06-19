@@ -147,3 +147,12 @@
         }
     }
 }
+
+@media (max-width: $tablet-point) {
+    .project-map {
+        &__filter {
+            top: 60px;
+            right: 10px;
+        }
+    }
+}

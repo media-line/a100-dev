@@ -1,25 +1,32 @@
 @import "./../../scss/_variables.scss";
-@import "./../../modules/tender/_tender.scss";
 
-.tenders {
-    &__header {
-        display: flex;
-    }
-
-    &__info {
-        padding-top: 8px;
-    }
-
-    .time {
-        margin-right: 200px;
-    }
-
-    .tender + .tender {
-        border-top: 1px solid $black;
-    }
-
-    &__print {
+.tender-detail {
+    &__name {
+        font-size: 15px;
+        font-weight: 500;
+        text-transform: uppercase;
         text-align: center;
+        padding-bottom: 15px;
+    }
+
+    &__options {
+        border-bottom: 1px solid $black;
+    }
+
+    &__option {
+        padding: 20px 15px;
+        display: flex;
+        font-size: 15px;
+        font-weight: 300;
+
+        & + .tender-detail__option {
+            border-top: 1px solid $black;
+        }
+    }
+
+    &__option-name {
+        min-width: 60%;
+        width: 60%;
     }
 
     &__print-text {
@@ -48,7 +55,7 @@
         cursor: pointer;
 
         &:hover {
-            .tenders__print-text:after {
+            .tender-detail__print-text:after {
                 height: 1px;
                 opacity: 0;
                 transform: translateY(5px);
@@ -59,32 +66,6 @@
             width: 38px;
             height: 32px;
             vertical-align: middle;
-        }
-    }
-
-    &__list {
-        border-bottom: 1px solid $black;
-        margin-bottom: 25px;
-    }
-}
-
-@media (max-width: $mobile-point) {
-    .tenders {
-        &__header {
-            flex-direction: column;
-        }
-
-        .time {
-            margin-right: 0;
-            margin-left: 30px;
-        }
-    }
-}
-
-@media print {
-    .tenders {
-        &__print-button {
-            display: none;
         }
     }
 }

@@ -1,0 +1,111 @@
+.select-custom {
+    position: relative;
+    font-size: 15px;
+    font-weight: 400;
+
+    &__value {
+        cursor: pointer;
+        outline: none;
+        padding: 3px 30px 0px 10px;
+        position: relative;
+        border: 2px solid $black;
+        transition: 0.5s;
+        box-sizing: border-box;
+        position: relative;
+        height: 28px;
+    }
+
+    &__value-js {
+        overflow: hidden;
+        height: 20px;
+        display: inline-block;
+    }
+
+    &__value-arrow {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30px;
+        bottom: 0;
+        border-left: 2px solid rgba($black, 0.4);
+
+        &:after {
+            height: 10px;
+            width: 1px;
+            content: '';
+            background-color: $black;
+            display: inline-block;
+            transition: 0.4s;
+            transform: translate(-18px, 0) rotate(-45deg);
+            position: absolute;
+            right: 0;
+            top: 7px;
+        }
+
+        &:before {
+            height: 10px;
+            width: 1px;
+            content: '';
+            background-color: $black;
+            display: inline-block;
+            transform: translate(18px, 0) rotate(45deg);
+            transition: 0.4s;
+            position: absolute;
+            left: 0;
+            top: 7px;
+        }
+    }
+
+    &__options {
+        border-bottom: 2px solid $black;
+        border-left: 2px solid $black;
+        border-right: 2px solid $black;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+        box-sizing: border-box;
+        background-color: $white;
+    }
+
+    &__option {
+        padding: 5px 10px;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        cursor: pointer;
+        transition: 0.4s;
+        background-color: transparent;
+        color: $black;
+
+        & + .select-custom__option {
+            border-top: 1px solid rgba($black, 0.4);
+        }
+
+        &:hover {
+            background-color: $black;
+            color: $white;
+        }
+    }
+
+    &_tenders {
+        margin-top: 5px;
+    }
+
+    &_active {
+        .select-custom__options {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .select-custom__value-arrow:after {
+            transform: translate(-11px, 0) rotate(-45deg);
+        }
+
+        .select-custom__value-arrow:before {
+            transform: translate(11px, 0) rotate(45deg);
+        }
+    }
+}

@@ -17,3 +17,9 @@
         font-weight: 500;
     }
 }
+
+@media print {
+    .breadcrumbs {
+        display: none;
+    }
+}

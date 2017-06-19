@@ -11,6 +11,7 @@
     text-decoration: none;
     background-color: $white;
     outline: none;
+    font-family: 'Ubuntu', sans-serif;
 
     &:hover {
         background-color: $black;
@@ -19,5 +20,13 @@
 
     &:after, &:before {
         content: none !important;
+    }
+}
+
+@media (max-width: $tablet-point) {
+    .button {
+        &_tender {
+            margin-top: 25px !important;
+        }
     }
 }
