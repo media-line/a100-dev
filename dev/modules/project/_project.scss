@@ -37,6 +37,7 @@
     &__state {
         display: inline-block;
         width: 150px;
+        height: 45px;
         border: 1px solid $white;
         position: absolute;
         top: 15px;
@@ -49,6 +50,12 @@
         padding: 2px 10px;
         box-sizing: border-box;
         transition: 0.4s;
+
+        &_center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     &__name {
@@ -63,7 +70,7 @@
         font-weight: 300;
         line-height: 1.1;
 
-        svg {
+        img {
             width: 15px;
             vertical-align: middle;
             margin-right: 5px;

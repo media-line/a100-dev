@@ -10,6 +10,7 @@
     &__title {
         font-size: 26px;
         font-weight: 500;
+        line-height: 1.1;
     }
 
     &__site {
@@ -28,7 +29,7 @@
         padding: 35px 25px;
     }
 
-    svg {
+    &__marker {
         width: 15px;
         vertical-align: middle;
         margin-right: 5px;

@@ -17,30 +17,8 @@ const watch = require('gulp-watch');
 const changed = require('gulp-changed');
 const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cached');
+const template = 'a100-development';
 
-
-gulp.task('scripts', function() {
-    return gulp.src(['./dev/components/**/*.js', './dev/js/common.js'])
-        .pipe(plumber({ errorHandler: handleErrors }))
-        .pipe(named())
-        .pipe(webpackStream({
-            watch: true,
-            module: {
-                loaders: [{
-                    test: /.js?$/,
-                    loader: 'babel-loader',
-                    exclude: /node_modules/,
-                    query: {
-                        presets: ['es2015']
-                    }
-                }]
-            },
-            plugins: [
-                new webpack.NoErrorsPlugin()
-            ]
-        }))
-        .pipe(gulp.dest('./public/'));
-});
 
 
 
@@ -55,12 +33,12 @@ gulp.task('clean:script', function() {
 gulp.task('postcss', function() {
     return gulp.src('./dev/**/*.scss')
     .pipe(plumber({ errorHandler: handleErrors }))
-    .pipe(cache('postcss'))
     .pipe(sourcemaps.init())
     .pipe(sass({
        errLogToConsole: true,
        outputStyle: 'expanded'
     }))
+    .pipe(cache('postcss'))
     .pipe(postcss([
        autoprefixer({ browsers: ['last 2 version'] }),
     ]))
@@ -103,7 +81,10 @@ gulp.task('scripts', function(callback) {
         },
         plugins: [
             new webpack.NoErrorsPlugin()
-        ]
+        ],
+        output: {
+            library: ["library", "[name]"],
+        },
     }, null, function(err, stats) {
         if (startBuild) {
             startBuild = false;
@@ -135,7 +116,7 @@ gulp.task('watch', ['postcss', 'scripts', 'assets', 'images'], function() {
 });
 
 gulp.task('assets', function() {
-    return gulp.src(['./dev/{fonts,svg}/**/*', './dev/*.html', './lib/*'])
+    return gulp.src(['./dev/{fonts,svg}/**/*', './dev/*.html', './dev/lib/*'])
     .pipe(changed('./public/'))
     .pipe(gulp.dest('./public/'))
     .pipe(browserSync.stream());
@@ -159,3 +140,111 @@ function handleErrors() {
     gutil.beep();
     this.emit('end');
 }
+
+gulp.task('clean:build', function() {
+    return del(['./public/*']);
+});
+
+gulp.task('scripts-build', function() {
+    return gulp.src(['./dev/components/**/*.js', './dev/js/common.js'])
+        .pipe(plumber({ errorHandler: handleErrors }))
+        .pipe(named())
+        .pipe(webpackStream({
+            module: {
+                loaders: [{
+                    test: /.js?$/,
+                    loader: 'babel-loader',
+                    exclude: /node_modules/,
+                    query: {
+                        presets: ['es2015']
+                    }
+                }]
+            },
+            plugins: [
+                new webpack.NoErrorsPlugin()
+            ],
+            output: {
+                library: ["library", "[name]"],
+            },
+        }))
+        .pipe(gulp.dest('./public/js/'));
+});
+
+gulp.task('postcss-build', function() {
+    return gulp.src('./dev/**/*.scss')
+    .pipe(plumber({ errorHandler: handleErrors }))
+    .pipe(sass({
+       errLogToConsole: true,
+       outputStyle: 'expanded'
+    }))
+    .pipe(postcss([
+       autoprefixer({ browsers: ['last 2 version'] }),
+    ]))
+    .pipe(rename(function (path) {
+        path.dirname = "";
+    }))
+    .pipe(gulp.dest('./public/css/'))
+    .pipe(browserSync.stream());
+});
+
+gulp.task('assets-build', function() {
+    return gulp.src(['./dev/{fonts,svg}/**/*', './dev/*.html', './dev/lib/*'])
+    .pipe(gulp.dest('./public/'))
+});
+
+gulp.task('images-build', function() {
+    return gulp.src('./dev/images/**/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('./public/images/'))
+});
+
+
+const path = {
+            'breadcrumbs': 'bitrix/breadcrumb/.default',
+            'pagination': 'bitrix/system.pagenavigation/.default',
+            'news-preview': 'bitrix/news/news/bitrix/news.list/.default',
+            'news-detail': 'bitrix/news/news/bitrix/news.detail/.default',
+            'projects': 'bitrix/catalog/projects/bitrix/catalog.section.list/.default',
+            'projects': 'bitrix/catalog/projects/bitrix/catalog.section/.default',
+            'project-detail': 'bitrix/catalog/projects/bitrix/catalog.element/.default',
+            'numbers-animation': 'ml/numbers-animation/.default',
+            'map': 'ml/map/.default',
+            'project-map': 'bitrix/catalog.section.list/project-map',
+            }
+
+const pathExcludeJS = [];
+const pathExcludeCSS = [];
+
+gulp.task('rebuild', ['clean:build'], function() {
+    gulp.start('scripts-build');
+    gulp.start('postcss-build');
+    gulp.start('assets-build');
+    gulp.start('images-build');
+    return true;
+});
+
+gulp.task('compile', function() {
+    for (let name in path) {
+        if (pathExcludeJS.indexOf(name) == -1) {
+            gulp.src('public/js/'+name+'.js')
+            .pipe(rename('script.js'))
+            .pipe(gulp.dest('public/'+template+'/components/'+path[name]));
+        }
+
+        if (pathExcludeCSS.indexOf(name) == -1) {
+            gulp.src('public/css/'+name+'.css')
+            .pipe(rename('style.css'))
+            .pipe(gulp.dest('public/'+template+'/components/'+path[name]));
+        }
+    }
+
+    gulp.src('public/css/common.css')
+        .pipe(rename('common.css'))
+        .pipe(gulp.dest('public/'+template+'/css/'));
+
+    gulp.src('public/js/common.js')
+        .pipe(rename('common.js'))
+        .pipe(gulp.dest('public/'+template+'/js/'));
+
+    return true;
+});

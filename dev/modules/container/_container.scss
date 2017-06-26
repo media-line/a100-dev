@@ -11,12 +11,20 @@
     &_responsive {
         width: $container-responsive;
     }
+
+    &_full {
+        width: 100%;
+    } 
 }
 
 @media (max-width: $big-device-point) {
     .container {
         &_responsive {
             width: $container;
+        }
+
+        &_full {
+            width: 100%;
         }
     }
 }
@@ -28,6 +36,10 @@
         &_small {
             width: $container-tiny;
         }
+
+        &_full {
+            width: 100%;
+        }
     }
 }
 
@@ -38,6 +50,10 @@
 
         &_small {
             width: $container-table;
+        }
+
+        &_full {
+            width: 100%;
         }
     }
 }

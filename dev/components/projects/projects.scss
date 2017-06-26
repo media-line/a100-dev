@@ -25,6 +25,10 @@
         flex-wrap: wrap;
         justify-content: space-between;
 
+        &_padding {
+            padding-top: 30px;
+        }
+
         .project {
             width: 48%;
         }

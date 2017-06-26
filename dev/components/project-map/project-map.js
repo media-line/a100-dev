@@ -37,9 +37,9 @@ function mapInit (collections) {
                 $(markers).each(function (index, value) {
                     let placemark;
                     placemark = new ymaps.Placemark([value[0], value[1]], {
-                        balloonContent: 'Жилой комплекс "Боровая"',
-                        balloonLink: '/',
-                        balloonImg: './images/map-project.jpg'
+                        balloonContent: value[4],
+                        balloonLink: value[6],
+                        balloonImg: value[5]
                     }, {
                         iconLayout: 'default#image',
                         iconImageHref: value[3],
@@ -99,5 +99,7 @@ $(document).ready(function() {
         }
     });
 
-    let init = new mapInit([[[53.952375, 27.666108, '223053, Минский р-н, д. Боровая, 7', './images/marker.png'], [53.352375, 27.166108, '223053, Минский р-н, д. Боровая, 7', './images/marker.png']], [[53.072375, 27.696108, '223053, Минский р-н, д. Боровая, 7', './images/marker1.png'], [53.242375, 27.566108, '223053, Минский р-н, д. Боровая, 7', './images/marker1.png']]]);
+    //let init = new mapInit([[[53.952375, 27.666108, '223053, Минский р-н, д. Боровая, 7', './images/marker.png'], [53.352375, 27.166108, '223053, Минский р-н, д. Боровая, 7', './images/marker.png']], [[53.072375, 27.696108, '223053, Минский р-н, д. Боровая, 7', './images/marker1.png'], [53.242375, 27.566108, '223053, Минский р-н, д. Боровая, 7', './images/marker1.png']]]);
 });
+
+export {mapInit};
