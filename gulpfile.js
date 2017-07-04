@@ -203,6 +203,7 @@ const path = {
             'breadcrumbs': 'bitrix/breadcrumb/.default',
             'pagination': 'bitrix/system.pagenavigation/.default',
             'news-preview': 'bitrix/news/news/bitrix/news.list/.default',
+            'news-preview': 'bitrix/news.list/news-preview',
             'news-detail': 'bitrix/news/news/bitrix/news.detail/.default',
             'projects': 'bitrix/catalog/projects/bitrix/catalog.section.list/.default',
             'projects': 'bitrix/catalog/projects/bitrix/catalog.section/.default',
@@ -210,6 +211,15 @@ const path = {
             'numbers-animation': 'ml/numbers-animation/.default',
             'map': 'ml/map/.default',
             'project-map': 'bitrix/catalog.section.list/project-map',
+            'top-menu': 'bitrix/menu/top-menu',
+            'bottom-menu': 'bitrix/menu/bottom-menu',
+            'slider': 'bitrix/news.list/slider',
+            'social-buttons': 'ml/social-buttons/.default',
+            'advantages-block': 'ml/advantages-block/.default',
+            'form': 'bitrix/form.result.new/form',
+            'rewards': 'bitrix/news.list/rewards',
+            'tenders': 'bitrix/news/tenders/bitrix/news.list/.default',
+            'tender-detail': 'bitrix/news/tenders/bitrix/news.detail/.default',
             }
 
 const pathExcludeJS = [];

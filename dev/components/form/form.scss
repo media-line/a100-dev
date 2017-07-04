@@ -20,7 +20,7 @@
     }
 
     &__field {
-        input {
+        input[type="text"] {
             width: 80%;
             height: 30px;
             border: 2px solid $black;
@@ -65,6 +65,51 @@
 
     &_callback {
         width: 460px;
+    }
+
+    &_tender {
+        width: 670px;
+
+        .form__name {
+            font-size: 26px;
+            text-transform: inherit;
+        }
+
+        .form__block {
+            display: flex;
+        }
+
+        .form__title {
+            width: 27%;
+            min-width: 27%;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: inherit;
+            line-height: 1.5;
+            display: flex;
+            align-items: center;
+            padding-right: 10px;
+            box-sizing: border-box;
+        }
+
+        .form__field {
+            width: 73%;
+            min-width: 73%;
+
+            input[type="text"] {
+                width: 100%;
+                border: none;
+                height: 40px;
+            }
+        }
+
+        .form__button {
+            text-align: left;
+
+            .button {
+                padding: 10px 60px;
+            }
+        }
     }
 
     &__button {

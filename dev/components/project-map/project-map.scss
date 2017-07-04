@@ -86,6 +86,8 @@
         border: 2px solid rgba($black, 0.5);
         background-color: $white;
         display: block;
+        text-align: center;
+        backface-visibility: hidden;
 
         &:after, &:before {
             content: none !important;
@@ -94,13 +96,36 @@
         img {
             width: 100%;
         }
+
+        &:hover {
+            .project-map__project-name:after {
+                height: 1px;
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
     }
 
     &__project-name {
         font-size: 17px;
         font-weight: 500;
         text-align: center;
-        padding: 5px 15px;
+        margin: 5px 15px 7px 15px;
+        position: relative;
+        display: inline-block;
+
+        &:after {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: $black;
+            content: '';
+            opacity: 0;
+            transition: 0.4s;
+            transform: translateY(-4px);
+        }
     }
 
     &__project-wrap {
@@ -130,6 +155,7 @@
             position: absolute;
             top: 0;
             left: 12px;
+            transition: 0.4s;
         }
 
         &:before {
@@ -144,6 +170,17 @@
             position: absolute;
             top: 0;
             left: 12px;
+            transition: 0.4s;
+        }
+
+        &:hover {
+            &:after {
+                background-color: rgba($black, 0.5);
+            }
+
+            &:before {
+                background-color: rgba($black, 0.5);
+            }
         }
     }
 }

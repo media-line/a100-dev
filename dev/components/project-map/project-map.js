@@ -59,6 +59,10 @@ function mapInit (collections) {
                  checkZoomRange: true
             });
 
+            map.events.add('click', function (e) {
+                map.balloon.close();
+            });
+
             map.behaviors.disable('scrollZoom');
         }
 }
@@ -99,7 +103,7 @@ $(document).ready(function() {
         }
     });
 
-    //let init = new mapInit([[[53.952375, 27.666108, '223053, Минский р-н, д. Боровая, 7', './images/marker.png'], [53.352375, 27.166108, '223053, Минский р-н, д. Боровая, 7', './images/marker.png']], [[53.072375, 27.696108, '223053, Минский р-н, д. Боровая, 7', './images/marker1.png'], [53.242375, 27.566108, '223053, Минский р-н, д. Боровая, 7', './images/marker1.png']]]);
+    //let init = new mapInit([[[53.952375, 27.666108, '223053, Минский р-н, д. Боровая, 7', './images/marker.png', 'Новая Боровая', './images/project1.jpg', '/'], [53.352375, 27.166108, '223053, Минский р-н, д. Боровая, 7', './images/marker.png', 'Новая Боровая', './images/project1.jpg', '/']], [[53.072375, 27.696108, '223053, Минский р-н, д. Боровая, 7', './images/marker1.png', 'Новая Боровая', './images/project1.jpg', '/'], [53.242375, 27.566108, '223053, Минский р-н, д. Боровая, 7', './images/marker1.png', 'Новая Боровая', './images/project1.jpg', '/']]]);
 });
 
 export {mapInit};

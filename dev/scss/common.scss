@@ -48,3 +48,109 @@ img.top {
 img.bottom {
     margin-bottom: 15px;
 }
+
+.fancybox-show-thumbs .fancybox-inner {
+    right: 0;
+}
+
+.fancybox-thumbs {
+    width: 100%;
+    top: auto;
+    padding: 0;
+    background-color: transparent;
+}
+
+.fancybox-thumbs>ul>li {
+    border: none;
+    width: 250px;
+    height: 130px;
+}
+
+.fancybox-thumbs>ul>li:before {
+    border: none;
+    background-color: rgba($black, 0.6);
+    opacity: 1;
+}
+
+.fancybox-thumbs>ul>li.fancybox-thumbs-active:before {
+    opacity: 0;
+}
+
+.fancybox-thumbs>ul>li:hover:before {
+    opacity: 0;
+}
+
+.fancybox-caption-wrap {
+    padding: 0;
+    bottom: 140px;
+    background: transparent;
+    left: 50px;
+}
+
+.fancybox-caption {
+    border-top: none;
+    font-size: 21px;
+    text-transform: uppercase;
+}
+
+.fancybox-arrow {
+    z-index: 100000;
+}
+
+.fancybox-toolbar {
+    bottom: 0;
+}
+
+.fancybox-button.fancybox-button--fullscreen {
+    position: absolute;
+    bottom: 130px;
+    right: 0;
+}
+
+.fancybox-button--close:after, .fancybox-button--close:before {
+    background-color: $white;
+    width: 25px;
+    height: 3px;
+    transition: 0.3s;
+}
+
+.fancybox-button.fancybox-button--close {
+    background-color: transparent;
+    top: 5px;
+    right: 10px;
+
+    &:hover {
+        background-color: transparent;
+
+        &:after, &:before {
+            background-color: rgba($white, 0.7);
+        }
+    }
+}
+
+.fancybox-button--fullscreen:before {
+    border: none;
+}
+
+.fancybox-button--fullscreen {
+    background-color: transparent !important;
+    background-image: url('./../images/arrow-wide.png');
+    width: 25px;
+    height: 25px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 15px !important;
+
+    &:after, &:before {
+        content: none;
+    }
+
+    &:hover {
+        background-color: transparent !important;
+        background-image: url('./../images/arrow-wide.png') !important;
+        background-position: center !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+    }
+}

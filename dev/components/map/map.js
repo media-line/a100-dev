@@ -2,7 +2,7 @@ const mapContainer = 'map__js';
 const $contentBlock = '.map__content';
 const $mapContainer = '.map__js';
 const $mark = '.header__wrap';
-const $contactsMap = 'map__js_contacts';
+const $contactsMap = '.map__js_contacts';
 
 let map;
 

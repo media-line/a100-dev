@@ -48,6 +48,7 @@ body.modal__open {
         margin: 30px 0;
         max-height: 100%;
         overflow-y: auto;
+        background-color: $white;
 
         &_wide {
             width: 700px;
@@ -68,7 +69,7 @@ body.modal__open {
     }
 
     &__body {
-        background-color: $white;
+        background-color: rgba($white-dark, 0.8);
         padding: 15px;
         position: relative;
         border: 2px solid $white-dark;

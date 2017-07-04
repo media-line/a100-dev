@@ -49,7 +49,7 @@
         }
     }
 
-    &__print-button {
+    &__button {
         background-color: transparent;
         border: none;
         cursor: pointer;
@@ -62,10 +62,24 @@
             }
         }
 
-        svg {
+        img {
             width: 38px;
             height: 32px;
             vertical-align: middle;
+        }
+    }
+
+    &__option-value {
+        &_buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__button {
+        & + .tender-detail__button {
+            margin-top: 20px;
         }
     }
 }

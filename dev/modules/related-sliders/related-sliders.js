@@ -26,4 +26,17 @@ $(document).ready(function () {
             }
         ]
     });
+
+    $("[data-fancybox]").fancybox({
+        buttons : [
+    		'fullScreen',
+    		'close'
+    	],
+        fullScreen : {
+    		autoStart : true,
+    	},
+        thumbs : {
+    		autoStart   : true
+    	},
+    });
 });

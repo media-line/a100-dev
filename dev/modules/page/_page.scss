@@ -33,6 +33,10 @@
     }
 
     li {
+        position: relative;
+        padding-left: 10px;
+        padding-bottom: 10px;
+
         &:before {
             display: inline-block;
             height: 4px;
@@ -40,15 +44,10 @@
             border-radius: 100%;
             content: '';
             background-color: $black;
-            vertical-align: middle;
-            margin-right: 7px;
-            position: relative;
-            top: -1px;
+            position: absolute;
+            top: 9px;
+            left: 0;
         }
-    }
-
-    ul {
-        padding-bottom: 10px;
     }
 
     &__important {
@@ -73,6 +72,9 @@
                 transform: rotate(-50deg);
                 vertical-align: top;
                 top: 2px;
+                left: 0;
+                position: relative;
+                margin-right: 5px;
             }
         }
     }
