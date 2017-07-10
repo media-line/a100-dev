@@ -6,13 +6,18 @@
     &__value {
         cursor: pointer;
         outline: none;
-        padding: 3px 30px 0px 10px;
+        padding: 0px 30px 0px 10px;
         position: relative;
         border: 2px solid $black;
         transition: 0.5s;
         box-sizing: border-box;
         position: relative;
         height: 28px;
+        width: 100%;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 16px;
+        z-index: 1;
+        background-color: transparent;
     }
 
     &__value-arrow {

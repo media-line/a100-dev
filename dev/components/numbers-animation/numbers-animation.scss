@@ -132,9 +132,17 @@
             border-left: 4px solid $black;
             padding-left: 10px;
 
+            &:nth-child(1) {
+                justify-content: flex-start;
+            }
+
             &:nth-child(2) {
                 width: 100%;
                 min-width: 100%;
+                padding-left: 10px;
+            }
+
+            &:nth-child(3) {
                 padding-left: 10px;
             }
         }
@@ -147,6 +155,16 @@
 
             .numbers-animation__number:nth-child(2) {
                 padding-left: 10px;
+            }
+        }
+
+        &_mainpage {
+            .numbers-animation__number {
+                &:nth-child(2) {
+                    width: 100%;
+                    min-width: 100%;
+                    justify-content: flex-start;
+                }
             }
         }
     }

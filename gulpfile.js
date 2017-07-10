@@ -217,9 +217,13 @@ const path = {
             'social-buttons': 'ml/social-buttons/.default',
             'advantages-block': 'ml/advantages-block/.default',
             'form': 'bitrix/form.result.new/form',
+            'form': 'bitrix/form.result.new/tender-form',
+            'form': 'bitrix/form.result.new/offer-form',
             'rewards': 'bitrix/news.list/rewards',
             'tenders': 'bitrix/news/tenders/bitrix/news.list/.default',
             'tender-detail': 'bitrix/news/tenders/bitrix/news.detail/.default',
+            'tender-detail': 'bitrix/news/tenders/bitrix/news.detail/.default',
+            'time': 'ml/time/.default',
             }
 
 const pathExcludeJS = [];

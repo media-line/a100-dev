@@ -81,5 +81,15 @@
         & + .tender-detail__button {
             margin-top: 20px;
         }
+
+        &:after {
+            content: none;
+        }
+
+        &:hover {
+            &:after {
+                content: none;
+            }
+        }
     }
 }

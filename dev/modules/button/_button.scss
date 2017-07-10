@@ -21,12 +21,16 @@
     &:after, &:before {
         content: none !important;
     }
+
+    &_tender {
+        margin-top: 25px !important;
+    }
 }
 
-@media (max-width: $tablet-point) {
+/*@media (max-width: $tablet-point) {
     .button {
         &_tender {
             margin-top: 25px !important;
         }
     }
-}
+}*/

@@ -16,6 +16,7 @@
     <script src="./js/top-menu.js"></script>
     <script src="./js/numbers-animation.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="./js/form.js"></script>
 
 
     <link href="./lib/slick.css" rel="stylesheet">
@@ -29,6 +30,7 @@
     <link href="./css/bottom-menu.css" rel="stylesheet">
     <link href="./css/numbers-animation.css" rel="stylesheet">
     <link href="./css/slider.css" rel="stylesheet">
+    <link href="./css/form.css" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -53,7 +55,7 @@
 
                     <div class="header__content">
                         <div class="header__top">
-                            <button class="header__offer">
+                            <button class="header__offer modal__button" data-modal-button="offer">
                                 Предложить земельный участок
                             </button>
 
@@ -102,8 +104,18 @@
                                     <a href="/" class="top-menu__link">Пресс-центр</a>
                                 </div>
 
-                                <div class="top-menu__element">
+                                <div class="top-menu__element top-menu__element_parent">
                                     <a href="/" class="top-menu__link">Партнеры</a>
+
+                                    <div class="top-menu__submenu">
+                                        <div class="top-menu__element top-menu__element_submenu">
+                                            <a href="/" class="top-menu__link">Тест 1</a>
+                                        </div>
+
+                                        <div class="top-menu__element top-menu__element_submenu">
+                                            <a href="/" class="top-menu__link">Тест 2</a>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="top-menu__element">
@@ -409,5 +421,122 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal" data-modal="offer">
+        <div class="modal__wrapper">
+            <div class="modal__block">
+                <div class="modal__body">
+                    <div class="modal__close">
+                        <svg width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
+                          <g>
+                            <path class="svg-cross" d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"/>
+                          </g>
+                        </svg>
+                    </div>
+
+                    <form class="form form_offer">
+                        <div class="form__name">
+                            Заявка на участие в тендере и предквалификационная информация:
+                        </div>
+
+                        <div class="form__block">
+                            <div class="form__title">
+                                Наименование компании:*
+                            </div>
+
+                            <div class="form__field">
+                                <input type="text">
+                            </div>
+                        </div>
+
+                        <div class="form__block">
+                            <div class="form__title">
+                                Контактное лицо:*
+                            </div>
+
+                            <div class="form__field">
+                                <input type="text">
+                            </div>
+                        </div>
+
+                        <div class="form__block">
+                            <div class="form__title">
+                                Ваш E-Mail:*
+                            </div>
+
+                            <div class="form__field">
+                                <input type="text">
+                            </div>
+                        </div>
+
+                        <div class="form__block form__block_select">
+                            <div class="form__title">
+                                Предлагаемый объект:*
+                            </div>
+
+                            <div class="form__field">
+                                <div class="select-custom select-custom_offer">
+                                    <div class="select-custom__value">
+                                        <span class="select-custom__value-js"></span>
+                                        <span class="select-custom__value-arrow"></span>
+                                    </div>
+
+                                    <div class="select-custom__options">
+                                        <div data-select="1" class="select-custom__option">Земельный участок</div>
+                                        <div data-select="2" class="select-custom__option">Земельный участок 1</div>
+                                        <div data-select="3" class="select-custom__option">Земельный участок 2</div>
+                                    </div>
+
+                                    <input class="select-custom__input" type="hidden" value="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form__block form__block_textarea">
+                            <div class="form__title">
+                                Подробное описание объекта
+                            </div>
+
+                            <div class="form__field">
+                                <textarea></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form__block form__block_file">
+                            <div class="form__title">
+                                План расположения объекта
+                            </div>
+
+                            <div class="form__field">
+                                <label class="form__file-label">
+                                    <span class="form__file-label-choice">выбрать файл</span>
+                                    <span class="form__file-label-value">файл не выбран</span>
+                                    <input type="file">
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form__block form__block_file">
+                            <div class="form__title">
+                                Добавить ещё документы
+                            </div>
+
+                            <div class="form__field">
+                                <label class="form__file-label">
+                                    <span class="form__file-label-choice">Выбрать файл</span>
+                                    <span class="form__file-label-value">файл не выбран</span>
+                                    <input type="file">
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form__button">
+                            <button class="button">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

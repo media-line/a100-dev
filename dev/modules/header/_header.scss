@@ -3,6 +3,7 @@
     background-position: center;
     line-height: 1;
     position: relative;
+    z-index: 10;
 
     &:before {
         content: '';
@@ -77,7 +78,6 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        padding-bottom: 20px;
     }
 
     &__bottom {
@@ -91,7 +91,7 @@
 
     &__wrap {
         display: flex;
-        padding: 20px 0;
+        padding: 20px;
         align-items: center;
         position: relative;
         z-index: 1;
@@ -123,6 +123,12 @@
     &_alt {
         &:before {
             content: none;
+        }
+
+        .top-menu__submenu {
+            background-color: $white;
+            border-top: 1px solid $black;
+            border-bottom: 1px solid $black;
         }
 
         .top-menu__link {
@@ -243,7 +249,17 @@
         }
 
         &_inner {
-            margin-bottom: 40px;
+            margin-bottom: 60px;
+        }
+
+        &__contacts {
+            min-width: 130px;
+            width: 130px;
+        }
+
+        &__icons {
+            min-width: 130px;
+            width: 130px;
         }
     }
 }
@@ -254,6 +270,21 @@
             .top-menu {
                 border-top: 1px solid $black;
                 border-bottom: 1px solid $black;
+            }
+
+            .top-menu__submenu {
+                border-top: none;
+                border-bottom: none;
+            }
+
+            .top-menu__element_submenu {
+                &:first-child {
+                    border-top: 1px solid $black;
+                }
+
+                &:last-child {
+                    border-bottom: 1px solid $black;
+                }
             }
         }
 
@@ -272,6 +303,7 @@
         &__content {
             width: 100%;
             min-width: 100%;
+            padding-top: 15px;
         }
 
         &__menu-button {
@@ -293,7 +325,7 @@
 
         &__top {
             flex-wrap: wrap;
-            padding-top: 10px;
+            padding-top: 15px;
         }
 
         &__icons {

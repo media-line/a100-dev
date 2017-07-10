@@ -63,8 +63,135 @@
         }
     }
 
+    &__file-label {
+        width: 100%;
+        background-color: $white;
+        height: 40px;
+        box-sizing: border-box;
+        padding-top: 13px;
+        display: block;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+
+        input[type="file"] {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        &:hover {
+            .form__file-label-choice {
+                border-bottom: 1px solid transparent;
+            }
+        }
+    }
+
+    &__file-label-choice {
+        font-size: 13px;
+        transition: 0.3s;
+        color: rgba($black, 0.7);
+        border-bottom: 1px solid rgba($black, 0.7);
+        position: absolute;
+        left: 10%;
+        font-weight: 300;
+    }
+
+    &__file-label-value {
+        position: absolute;
+        left: 50%;
+        font-weight: 500;
+        font-size: 13px;
+    }
+
     &_callback {
         width: 460px;
+    }
+
+    &_offer {
+        width: 670px;
+
+        .form__name {
+            font-size: 26px;
+            text-transform: inherit;
+        }
+
+        .form__block {
+            display: flex;
+
+            &_select {
+                .form__title {
+                    width: 28%;
+                    min-width: 28%;
+                }
+
+                .form__field {
+                    width: 72%;
+                    min-width: 72%;
+                }
+            }
+
+            &_textarea {
+                .form__title {
+                    width: 36%;
+                    min-width: 36%;
+                    align-items: flex-start;
+                    padding-top: 5px;
+                }
+
+                .form__field {
+                    width: 64%;
+                    min-width: 64%;
+                }
+            }
+
+            &_file {
+                .form__title {
+                    width: 36%;
+                    min-width: 36%;
+                }
+
+                .form__field {
+                    width: 64%;
+                    min-width: 64%;
+                }
+            }
+        }
+
+        .form__title {
+            width: 20%;
+            min-width: 20%;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: inherit;
+            line-height: 1.5;
+            display: flex;
+            align-items: center;
+            padding-right: 10px;
+            box-sizing: border-box;
+        }
+
+        .form__field {
+            width: 80%;
+            min-width: 80%;
+
+            input[type="text"] {
+                width: 100%;
+                border: none;
+                height: 40px;
+            }
+
+            textarea {
+                border: none;
+            }
+        }
+
+        .form__button {
+            text-align: left;
+
+            .button {
+                padding: 10px 60px;
+            }
+        }
     }
 
     &_tender {
@@ -122,9 +249,84 @@
     }
 }
 
+@media (max-width: $tablet-point) {
+    .form {
+        &_offer {
+            width: 600px;
+        }
+
+        &_tender {
+            width: 600px;
+        }
+    }
+}
+
 @media (max-width: $mobile-point) {
     .form {
+
         &_callback {
+            width: 280px;
+        }
+
+        &_offer {
+            width: 280px;
+
+            .form__block {
+                flex-wrap: wrap;
+
+                &_select {
+                    .form__title {
+                        width: 100%;
+                        min-width: 100%;
+                    }
+
+                    .form__field {
+                        min-width: 100%;
+                        width: 100%;
+                    }
+                }
+
+                &_textarea {
+                    .form__title {
+                        width: 100%;
+                        min-width: 100%;
+                    }
+
+                    .form__field {
+                        min-width: 100%;
+                        width: 100%;
+                    }
+                }
+
+                &_file {
+                    .form__title {
+                        width: 100%;
+                        min-width: 100%;
+                    }
+
+                    .form__field {
+                        min-width: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .form__title {
+                min-width: 100%;
+                width: 100%;
+            }
+
+            .form__field {
+                min-width: 100%;
+                width: 100%;
+            }
+
+            .form__name {
+                font-size: 18px;
+            }
+        }
+
+        &_tender {
             width: 280px;
         }
     }

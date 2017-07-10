@@ -79,6 +79,11 @@
         transition: 0.4s;
         background-color: transparent;
         color: $black;
+        box-sizing: border-box;
+
+        &_empty {
+            height: 25px;
+        }
 
         & + .select-custom__option {
             border-top: 1px solid rgba($black, 0.4);
@@ -106,6 +111,67 @@
 
         .select-custom__value-arrow:before {
             transform: translate(11px, 0) rotate(45deg);
+        }
+    }
+
+    &_form {
+        .select-custom__value {
+            height: 40px;
+            background-color: $white;
+            padding-top: 10px;
+        }
+
+        .select-custom__value-arrow {
+            border-left: none;
+
+            &:after {
+                top: 13px
+            }
+
+            &:before {
+                top: 13px
+            }
+        }
+
+        .select-custom__options {
+            width: 100% !important;
+        }
+    }
+
+    &_offer {
+        &.select-custom_active {
+            .select-custom__value {
+                border: 1px solid rgba($black, 0.3);
+            }
+        }
+
+        .select-custom__value {
+            border: 1px solid transparent;
+            height: 40px;
+            background-color: $white;
+            padding-top: 10px;
+        }
+
+        .select-custom__value-arrow {
+            border-left: none;
+
+            &:after {
+                top: 13px;
+            }
+
+            &:before {
+                top: 13px;
+            }
+        }
+
+        .select-custom__options {
+            width: 100% !important;
+            border: 1px solid rgba($black, 0.3);
+            border-top: none;
+        }
+
+        .select-custom__option {
+            padding: 10px;
         }
     }
 }

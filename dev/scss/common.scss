@@ -21,8 +21,8 @@ body {
 }
 
 ::selection {
-    /*background-color: $blue;
-    color: $white;*/
+    background-color: $black;
+    color: $white;
 }
 
 b {
@@ -31,6 +31,12 @@ b {
 
 p {
     padding-bottom: 10px;
+}
+
+a {
+    &:hover, &:active, &:focus {
+        text-decoration: none;
+    }
 }
 
 img.right {
@@ -49,6 +55,15 @@ img.bottom {
     margin-bottom: 15px;
 }
 
+ymaps {
+	filter: grayscale(1);
+}
+
+::selection {
+    background-color: $black;
+    color: $white;
+}
+
 .fancybox-show-thumbs .fancybox-inner {
     right: 0;
 }
@@ -58,26 +73,13 @@ img.bottom {
     top: auto;
     padding: 0;
     background-color: transparent;
+    z-index: 100000;
 }
 
 .fancybox-thumbs>ul>li {
     border: none;
     width: 250px;
     height: 130px;
-}
-
-.fancybox-thumbs>ul>li:before {
-    border: none;
-    background-color: rgba($black, 0.6);
-    opacity: 1;
-}
-
-.fancybox-thumbs>ul>li.fancybox-thumbs-active:before {
-    opacity: 0;
-}
-
-.fancybox-thumbs>ul>li:hover:before {
-    opacity: 0;
 }
 
 .fancybox-caption-wrap {
@@ -103,7 +105,7 @@ img.bottom {
 
 .fancybox-button.fancybox-button--fullscreen {
     position: absolute;
-    bottom: 130px;
+    bottom: 160px;
     right: 0;
 }
 
@@ -152,5 +154,69 @@ img.bottom {
         background-position: center !important;
         background-size: contain !important;
         background-repeat: no-repeat !important;
+    }
+}
+
+.fancybox-thumbs .slick-slide {
+    height: 140px !important;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+}
+
+.fancybox-thumbs .slick-slide img {
+    height: 140px !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+}
+
+.fancybox-thumbs .slick-slide:before {
+    border: none;
+    background-color: rgba($black, 0.6);
+    opacity: 1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.3s;
+}
+
+.fancybox-thumbs .slick-slide.slick-current:before {
+    opacity: 0;
+}
+
+.fancybox-thumbs .slick-slide:hover:before {
+    opacity: 0;
+}
+
+.fancybox-thumbs .related-sliders__arrow {
+    border-left: 2px solid $white;
+    border-bottom: 2px solid $white;
+    z-index: 100;
+
+    &:hover {
+        border-left: 2px solid rgba($white, 0.5);
+        border-bottom: 2px solid rgba($white, 0.5);
+    }
+}
+
+.fancybox-thumbs .related-sliders__arrow_prev {
+    left: 10px;
+}
+
+.fancybox-thumbs .related-sliders__arrow_next {
+    right: 10px;
+}
+
+@media (max-width: $tablet-point) {
+    .fancybox-button.fancybox-button--fullscreen {
+        bottom: 30px;
+    }
+
+    .fancybox-caption-wrap {
+        bottom: 30px;
     }
 }

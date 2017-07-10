@@ -11,6 +11,14 @@ $(document).ready(function () {
         autoplaySpeed: 5000,
         arrows: false,
         dots: true,
+        responsive: [
+            {
+              breakpoint: 991,
+              settings: {
+                dots: false,
+              }
+            },
+        ]
     });
 
     if ($($header).length > 0) {

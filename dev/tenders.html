@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="./lib/isMobile.min.js"></script>
+    <script src="./lib/datepicker.min.js"></script>
+    <link href="./lib/datepicker.min.css" rel="stylesheet">
 
     <script src="./js/common.js"></script>
     <script src="./js/top-menu.js"></script>
@@ -220,12 +222,11 @@
                                 Начало приема заявок
 
                                 <div class="date-custom date-custom_tenders">
-                                    <div class="date-custom__value">
+                                    <input type="text" class="date-custom__value">
 
                                         <span class="date-custom__value-arrow">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.79 22.98"><path class="svg-date svg-date_hover" d="M5.69,6.19H.5a.5.5,0,0,1-.5-.5V.5A.5.5,0,0,1,.5,0H5.69a.5.5,0,0,1,.5.5V5.69a.5.5,0,0,1-.5.5ZM1,5.19H5.19V1H1V5.19Z"/><path class="svg-date" d="M14,6.19H8.8a.5.5,0,0,1-.5-.5V.5A.5.5,0,0,1,8.8,0H14a.5.5,0,0,1,.5.5V5.69a.5.5,0,0,1-.5.5Zm-4.69-1h4.19V1H9.3V5.19Z"/><path class="svg-date" d="M22.29,6.19H17.1a.5.5,0,0,1-.5-.5V.5a.5.5,0,0,1,.5-.5h5.19a.5.5,0,0,1,.5.5V5.69a.5.5,0,0,1-.5.5Zm-4.69-1h4.19V1H17.6V5.19Z"/><path class="svg-date" d="M5.69,14.58H.5a.5.5,0,0,1-.5-.5V8.9a.5.5,0,0,1,.5-.5H5.69a.5.5,0,0,1,.5.5v5.19a.5.5,0,0,1-.5.5ZM1,13.58H5.19V9.4H1v4.19Z"/><path class="svg-date" d="M14,14.58H8.8a.5.5,0,0,1-.5-.5V8.9a.5.5,0,0,1,.5-.5H14a.5.5,0,0,1,.5.5v5.19a.5.5,0,0,1-.5.5Zm-4.69-1h4.19V9.4H9.3v4.19Z"/><path class="svg-date" d="M22.29,14.58H17.1a.5.5,0,0,1-.5-.5V8.9a.5.5,0,0,1,.5-.5h5.19a.5.5,0,0,1,.5.5v5.19a.5.5,0,0,1-.5.5Zm-4.69-1h4.19V9.4H17.6v4.19Z"/><path class="svg-date" d="M5.69,23H.5a.5.5,0,0,1-.5-.5V17.29a.5.5,0,0,1,.5-.5H5.69a.5.5,0,0,1,.5.5v5.19a.5.5,0,0,1-.5.5ZM1,22H5.19V17.79H1V22Z"/><path class="svg-date" d="M14,23H8.8a.5.5,0,0,1-.5-.5V17.29a.5.5,0,0,1,.5-.5H14a.5.5,0,0,1,.5.5v5.19a.5.5,0,0,1-.5.5ZM9.3,22h4.19V17.79H9.3V22Z"/><path class="svg-date" d="M22.29,23H17.1a.5.5,0,0,1-.5-.5V17.29a.5.5,0,0,1,.5-.5h5.19a.5.5,0,0,1,.5.5v5.19a.5.5,0,0,1-.5.5ZM17.6,22h4.19V17.79H17.6V22Z"/></svg>
                                         </span>
-                                    </div>
                                 </div>
                             </div>
 
@@ -233,12 +234,11 @@
                                 Окончание тендера
 
                                 <div class="date-custom date-custom_tenders">
-                                    <div class="date-custom__value">
+                                    <input type="text" class="date-custom__value">
 
                                         <span class="date-custom__value-arrow">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.79 22.98"><path class="svg-date svg-date_hover" d="M5.69,6.19H.5a.5.5,0,0,1-.5-.5V.5A.5.5,0,0,1,.5,0H5.69a.5.5,0,0,1,.5.5V5.69a.5.5,0,0,1-.5.5ZM1,5.19H5.19V1H1V5.19Z"/><path class="svg-date" d="M14,6.19H8.8a.5.5,0,0,1-.5-.5V.5A.5.5,0,0,1,8.8,0H14a.5.5,0,0,1,.5.5V5.69a.5.5,0,0,1-.5.5Zm-4.69-1h4.19V1H9.3V5.19Z"/><path class="svg-date" d="M22.29,6.19H17.1a.5.5,0,0,1-.5-.5V.5a.5.5,0,0,1,.5-.5h5.19a.5.5,0,0,1,.5.5V5.69a.5.5,0,0,1-.5.5Zm-4.69-1h4.19V1H17.6V5.19Z"/><path class="svg-date" d="M5.69,14.58H.5a.5.5,0,0,1-.5-.5V8.9a.5.5,0,0,1,.5-.5H5.69a.5.5,0,0,1,.5.5v5.19a.5.5,0,0,1-.5.5ZM1,13.58H5.19V9.4H1v4.19Z"/><path class="svg-date" d="M14,14.58H8.8a.5.5,0,0,1-.5-.5V8.9a.5.5,0,0,1,.5-.5H14a.5.5,0,0,1,.5.5v5.19a.5.5,0,0,1-.5.5Zm-4.69-1h4.19V9.4H9.3v4.19Z"/><path class="svg-date" d="M22.29,14.58H17.1a.5.5,0,0,1-.5-.5V8.9a.5.5,0,0,1,.5-.5h5.19a.5.5,0,0,1,.5.5v5.19a.5.5,0,0,1-.5.5Zm-4.69-1h4.19V9.4H17.6v4.19Z"/><path class="svg-date" d="M5.69,23H.5a.5.5,0,0,1-.5-.5V17.29a.5.5,0,0,1,.5-.5H5.69a.5.5,0,0,1,.5.5v5.19a.5.5,0,0,1-.5.5ZM1,22H5.19V17.79H1V22Z"/><path class="svg-date" d="M14,23H8.8a.5.5,0,0,1-.5-.5V17.29a.5.5,0,0,1,.5-.5H14a.5.5,0,0,1,.5.5v5.19a.5.5,0,0,1-.5.5ZM9.3,22h4.19V17.79H9.3V22Z"/><path class="svg-date" d="M22.29,23H17.1a.5.5,0,0,1-.5-.5V17.29a.5.5,0,0,1,.5-.5h5.19a.5.5,0,0,1,.5.5v5.19a.5.5,0,0,1-.5.5ZM17.6,22h4.19V17.79H17.6V22Z"/></svg>
                                         </span>
-                                    </div>
                                 </div>
                             </div>
 
@@ -261,7 +261,11 @@
                             </div>
                         </div>
 
-                        <div class="tender">
+                        <input type="hidden" class="tender__date-min" value="04.07.2017">
+                        <input type="hidden" class="tender__date-max" value="17.07.2017">
+
+                        <div class="tenders__js">
+                        <!--<div class="tender">
                             <div class="tender__option tender__option_form">
                                 <span class="tender__option-name">Форма тендера:</span> ЦК
                             </div>
@@ -315,7 +319,7 @@
 
                                 <a href="/" class="button button_tender">Подробнее</a>
                             </div>
-                        </div>
+                        </div>-->
 
                         <div class="tender">
                             <div class="tender__option tender__option_form">
@@ -344,6 +348,7 @@
                                 <a href="/" class="button button_tender">Подробнее</a>
                             </div>
                         </div>
+                    </div>
                     </div>
 
                     <div class="tenders__print">

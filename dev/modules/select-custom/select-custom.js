@@ -37,6 +37,7 @@ $(window).on('load', function () {
 
         $(this).closest($select).find($selectValueJs).html(value);
         $(this).closest($select).find($selectInput).val(dataValue);
+        $(this).closest($select).find($selectInput).trigger("change");
         $(this).closest($select).removeClass(selectActive);
     });
 });
